@@ -811,14 +811,19 @@ a#totop:hover:before {
   h2 {
     font-size: 30px;
   }
+
+   
   h2:after {
     content: '';
     display: block;
-    width: 62px;
-    height: 4px;
+    width: 100%;
+    max-width: 600px;
+    height: 2px;
     background: black;
-    margin: 10px auto 40px;
+    margin: 10px 0 40px;
   }
+
+
   h3 {
     font-size: 24px;
   }
@@ -854,7 +859,7 @@ a#totop:hover:before {
     z-index: 9;
   }
   nav#globalnav h1 a {
-    font-size: 35px;
+    font-size: 40px;
   }
   nav#globalnav > .container {
     display: -webkit-box;
