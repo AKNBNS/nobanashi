@@ -256,7 +256,7 @@ h1 {
 
 h2 {
   font-family: "Noto Serif JP", "YuMincho", "Hiragino Mincho ProN";
-  text-align: center;
+  margin: 2em 0 0em;
 }
 
 h3 {
@@ -809,7 +809,7 @@ a#totop:hover:before {
     padding: 80px 0;
   }
   h2 {
-    font-size: 40px;
+    font-size: 30px;
   }
   h2:after {
     content: '';
