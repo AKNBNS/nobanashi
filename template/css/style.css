@@ -495,10 +495,18 @@ nav#globalnav.colorchange p#menubtn {
   color: #ffffff;
 }
 
+
+
+
 header {
-  background-color: #000000;
-  height: 100vh;
+  height: 60vh;
+  max-height: 500px;
 }
+
+
+
+
+
 
 header img {
   width: 100%;
