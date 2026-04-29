@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>作品タイトル</title>
+  <title>Viewer</title>
 
-  <script src="https://cdn.jsdelivr.net/npm/@toralab/tora-viewer@1"></script>
+  <!-- CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@toralab/tora-viewer@latest"></script>
 
   <script>
     function openViewer() {
@@ -19,14 +20,12 @@
         './assets/011.jpg'
       ]);
     }
+
+    // ページ開いた瞬間に起動
+    window.addEventListener('DOMContentLoaded', openViewer);
   </script>
 </head>
 
 <body>
-
-  <p style="text-align:center; margin-top:50px;">
-    <button onclick="openViewer()">漫画を読む</button>
-  </p>
-
 </body>
 </html>
