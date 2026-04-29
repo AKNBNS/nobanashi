@@ -400,14 +400,14 @@ nav#globalnav {
 }
 
 nav#globalnav .globalnav_bg {
-  height: 70px;
+  height: 100px;
   width: 100%;
   position: absolute;
   top: 0;
   z-index: -1;
   opacity: 1;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(5%, rgba(230, 230, 230, 0)), color-stop(51%, rgba(255, 255, 255, 0.9)));
-  background: linear-gradient(0deg, rgba(230, 230, 230, 0) 5%, rgba(255, 255, 255, 0.9) 51%);
+  background: linear-gradient(0deg, rgba(230, 230, 230, 0) 5%, rgba(255, 255, 255, 0.95) 51%);
 }
 
 nav#globalnav h1 a {
