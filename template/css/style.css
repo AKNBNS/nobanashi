@@ -850,12 +850,26 @@ a#totop:hover:before {
   nav#globalnav h1 a {
     font-size: 40px;
   }
-  nav#globalnav > .container {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-pack: justify;
-            justify-content: space-between;
+
+
+
+
+
+   
+   
+  nav#globalnav .container {
+    max-width: none;
+    margin: 0;
   }
+
+  nav#globalnav > .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+
+   
   nav#globalnav ul {
     display: -webkit-box;
     display: flex;
