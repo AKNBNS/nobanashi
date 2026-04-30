@@ -8,40 +8,24 @@
 <link rel="stylesheet" href="https://unpkg.com/laymic/dist/laymic.min.css">
 <script src="https://unpkg.com/laymic/dist/laymic.iife.min.js"></script>
 
-<style>
-html, body {
-  margin: 0;
-  height: 100%;
-}
-#viewer {
-  width: 100%;
-  height: 100vh;
-}
-</style>
-
 </head>
+
 <body>
 
-<div id="viewer"></div>
+<div class="laymic_template" data-viewer-id="manga1">
+  <img data-src="./assets/004.jpg">
+  <img data-src="./assets/005.jpg">
+  <img data-src="./assets/006.jpg">
+  <img data-src="./assets/007.jpg">
+  <img data-src="./assets/008.jpg">
+  <img data-src="./assets/009.jpg">
+  <img data-src="./assets/010.jpg">
+  <img data-src="./assets/011.jpg">
+</div>
 
-<script>
-window.addEventListener("load", function () {
-  new Laymic({
-    el: "#viewer",
-    pages: [
-      "./assets/004.jpg",
-      "./assets/005.jpg",
-      "./assets/006.jpg",
-      "./assets/007.jpg",
-      "./assets/008.jpg",
-      "./assets/009.jpg",
-      "./assets/010.jpg",
-      "./assets/011.jpg"
-    ],
-    isFirstPageSingle: true
-  });
-});
-</script>
+<button class="laymic_opener" data-for="manga1">
+  漫画を読む
+</button>
 
 </body>
 </html>
