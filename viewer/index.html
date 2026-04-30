@@ -5,42 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>漫画ビューアー</title>
     
-    <!-- 1. CSSをネット上の公式配信元から読み込む -->
+    <!-- ネット上の公式ファイルを使用 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/laymic@latest/dist/laymic.min.css">
     
     <style>
+        body { background-color: #1a1a1a; margin: 0; padding: 0; color: white; }
         #laymic { opacity: 0; transition: opacity 0.5s; }
-        #laymic img { width: 100%; }
-        body { background-color: #1a1a1a; margin: 0; padding: 0; }
+        /* 画像がない時に枠だけ表示して確認しやすくする */
+        #laymic img { width: 100%; min-height: 200px; border: 1px solid #444; }
+        #error-display { padding: 20px; color: #ff6b6b; font-family: monospace; }
     </style>
 </head>
 <body>
 
+    <div id="error-display"></div>
+
     <div id="laymic">
-      <img src="assets/004.jpg">
-      <img src="assets/005.jpg">
-      <img src="assets/006.jpg">
-      <img src="assets/007.jpg">
-      <img src="assets/008.jpg">
-      <img src="assets/009.jpg">
-      <img src="assets/010.jpg">
-      <img src="assets/011.jpg">
+      <!-- ここで画像が読み込めるかテストします -->
+      <img src="assets/004.jpg" onerror="document.getElementById('error-display').innerHTML += 'エラー: assets/004.jpg が見つかりません<br>'">
+      <img src="assets/005.jpg" onerror="document.getElementById('error-display').innerHTML += 'エラー: assets/005.jpg が見つかりません<br>'">
+      <img src="assets/006.jpg" onerror="document.getElementById('error-display').innerHTML += 'エラー: assets/006.jpg が見つかりません<br>'">
+      <img src="assets/007.jpg" onerror="document.getElementById('error-display').innerHTML += 'エラー: assets/007.jpg が見つかりません<br>'">
+      <img src="assets/008.jpg" onerror="document.getElementById('error-display').innerHTML += 'エラー: assets/008.jpg が見つかりません<br>'">
+      <img src="assets/009.jpg" onerror="document.getElementById('error-display').innerHTML += 'エラー: assets/009.jpg が見つかりません<br>'">
+      <img src="assets/010.jpg" onerror="document.getElementById('error-display').innerHTML += 'エラー: assets/010.jpg が見つかりません<br>'">
+      <img src="assets/011.jpg" onerror="document.getElementById('error-display').innerHTML += 'エラー: assets/011.jpg が見つかりません<br>'">
     </div>
 
-    <!-- 2. JSをネット上の公式配信元から読み込む（これで絶対読み込めます） -->
     <script src="https://cdn.jsdelivr.net/npm/laymic@latest/dist/laymic.iife.min.js"></script>
     
     <script>
-      // 読み込みを確認して実行
       window.addEventListener('load', function() {
         if (typeof Laymic !== 'undefined') {
-          new Laymic('#laymic', {
-            direction: 'rtl'
-          });
-          document.getElementById('laymic').style.opacity = 1;
-          console.log("ついに成功しました！");
+          try {
+            new Laymic('#laymic', { direction: 'rtl' });
+            document.getElementById('laymic').style.opacity = 1;
+            console.log("Laymic起動完了");
+          } catch (e) {
+            document.getElementById('error-display').innerHTML += '起動失敗: ' + e;
+          }
         } else {
-          alert("ネットからの読み込みにも失敗しました。ネット接続を確認してください。");
+          document.getElementById('error-display').innerHTML += 'Laymicライブラリが読み込めていません。';
         }
       });
     </script>
