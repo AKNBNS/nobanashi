@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>漫画ビューアー</title>
-    <!-- CSSは確実に存在するURLを指定 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/laymic@1.2.2/dist/laymic.min.css">
+    <!-- CSSは自分のリポジトリのものを使用 -->
+    <link rel="stylesheet" href="laymic/laymic.min.css">
     <style>
         body { background-color: #1a1a1a; margin: 0; padding: 0; color: white; }
         #laymic { opacity: 0; transition: opacity 0.5s; }
         #laymic img { width: 100%; }
-        #status-box { position: fixed; top: 10px; left: 10px; background: rgba(0,0,0,0.8); padding: 10px; z-index: 10000; border: 1px solid #555; }
+        #status-box { position: fixed; top: 10px; left: 10px; background: rgba(0,0,0,0.8); padding: 10px; z-index: 10000; border: 1px solid #555; font-size: 12px; }
     </style>
 </head>
 <body>
 
-    <div id="status-box">状態: 準備中...</div>
+    <div id="status-box">状態: ローカルファイル確認中...</div>
 
     <div id="laymic">
       <img src="assets/004.jpg">
@@ -29,27 +29,29 @@
     </div>
 
     <script>
-      // 1. プログラム（JSファイル）を動的に作成して読み込む
+      // 自分のGitHub PagesにあるJSファイルを強制的に読み込む
       const script = document.createElement('script');
-      // バージョンを固定した、確実に存在するURLです
-      script.src = "https://cdn.jsdelivr.net/npm/laymic@1.2.2/dist/laymic.iife.min.js";
+      
+      // パスに ./ をつけて、現在のフォルダ(viewer)内を探すよう明示
+      script.src = "./laymic/laymic.iife.min.js";
       
       script.onload = () => {
-        document.getElementById('status-box').innerHTML = "状態: ライブラリ読み込み成功！起動します...";
+        document.getElementById('status-box').innerHTML = "JS読み込み成功！起動します...";
         try {
-          // 2. 読み込みが終わったら起動
-          new Laymic('#laymic', {
-            direction: 'rtl'
-          });
-          document.getElementById('laymic').style.opacity = 1;
-          document.getElementById('status-box').style.display = "none";
+          if (typeof Laymic !== 'undefined') {
+            new Laymic('#laymic', { direction: 'rtl' });
+            document.getElementById('laymic').style.opacity = 1;
+            document.getElementById('status-box').style.display = "none";
+          } else {
+            document.getElementById('status-box').innerHTML = "エラー: ファイルは見つかりましたが、中身が空か壊れています。";
+          }
         } catch (e) {
-          document.getElementById('status-box').innerHTML = "起動エラー: " + e.message;
+          document.getElementById('status-box').innerHTML = "起動失敗: " + e.message;
         }
       };
 
       script.onerror = () => {
-        document.getElementById('status-box').innerHTML = "状態: JSファイルの取得に失敗しました。";
+        document.getElementById('status-box').innerHTML = "❌ 自分のリポジトリ内のJSも見つかりません。<br>ファイル名や場所が正しいか再確認してください。";
       };
 
       document.body.appendChild(script);
