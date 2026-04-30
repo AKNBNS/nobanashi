@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>漫画ビューアー</title>
-    <!-- CSSだけは今のところ外部ですが、もし真っ暗ならここも後で修正します -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/laymic@latest/dist/laymic.min.css">
+    <!-- CSSは確実に存在するURLを指定 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/laymic@1.2.2/dist/laymic.min.css">
     <style>
         body { background-color: #1a1a1a; margin: 0; padding: 0; color: white; }
         #laymic { opacity: 0; transition: opacity 0.5s; }
         #laymic img { width: 100%; }
-        #status-box { position: fixed; top: 10px; left: 10px; background: rgba(255,0,0,0.8); padding: 10px; z-index: 10000; font-size: 12px; }
+        #status-box { position: fixed; top: 10px; left: 10px; background: rgba(0,0,0,0.8); padding: 10px; z-index: 10000; border: 1px solid #555; }
     </style>
 </head>
 <body>
 
-    <div id="status-box">デバッグ中：プログラム直接実行</div>
+    <div id="status-box">状態: 準備中...</div>
 
     <div id="laymic">
-      <img src="assets/004.jpg" onerror="this.src='https://via.placeholder.com/300x400?text=Image+Not+Found'">
+      <img src="assets/004.jpg">
       <img src="assets/005.jpg">
       <img src="assets/006.jpg">
       <img src="assets/007.jpg">
@@ -28,27 +28,31 @@
       <img src="assets/011.jpg">
     </div>
 
-    <!-- 
-       外部JSファイル（laymic.iife.min.js）を読み込む代わりに、
-       ブラウザが直接実行できる形式でライブラリを呼び出します。
-    -->
-    <script type="module">
-      // 外部ファイルを使わず、JavaScriptの「import」という機能でネットから直接「部品」として呼び出します。
-      // これなら「script src="..."」という従来の読み込みがブロックされる環境でも動く可能性が高いです。
-      import Laymic from 'https://cdn.jsdelivr.net/npm/laymic@latest/dist/laymic.esm.js';
-
-      window.addEventListener('load', () => {
+    <script>
+      // 1. プログラム（JSファイル）を動的に作成して読み込む
+      const script = document.createElement('script');
+      // バージョンを固定した、確実に存在するURLです
+      script.src = "https://cdn.jsdelivr.net/npm/laymic@1.2.2/dist/laymic.iife.min.js";
+      
+      script.onload = () => {
+        document.getElementById('status-box').innerHTML = "状態: ライブラリ読み込み成功！起動します...";
         try {
+          // 2. 読み込みが終わったら起動
           new Laymic('#laymic', {
             direction: 'rtl'
           });
           document.getElementById('laymic').style.opacity = 1;
-          document.getElementById('status-box').style.backgroundColor = "green";
-          document.getElementById('status-box').innerHTML = "✅ 起動に成功しました！";
+          document.getElementById('status-box').style.display = "none";
         } catch (e) {
-          document.getElementById('status-box').innerHTML = "❌ 起動エラー: " + e.message;
+          document.getElementById('status-box').innerHTML = "起動エラー: " + e.message;
         }
-      });
+      };
+
+      script.onerror = () => {
+        document.getElementById('status-box').innerHTML = "状態: JSファイルの取得に失敗しました。";
+      };
+
+      document.body.appendChild(script);
     </script>
 </body>
 </html>
