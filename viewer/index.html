@@ -5,47 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>漫画ビューアー</title>
     
-    <!-- URLをフルアドレス（絶対パス）で指定 -->
-    <link rel="stylesheet" href="https://akksr21.github.io/AKKSR21/viewer/laymic/laymic.min.css">
+    <!-- 1. CSSをネット上の公式配信元から読み込む -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/laymic@latest/dist/laymic.min.css">
     
     <style>
         #laymic { opacity: 0; transition: opacity 0.5s; }
         #laymic img { width: 100%; }
-        body { background-color: #333; margin: 0; padding: 0; color: white; }
+        body { background-color: #1a1a1a; margin: 0; padding: 0; }
     </style>
 </head>
 <body>
 
     <div id="laymic">
-      <img src="./assets/004.jpg">
-      <img src="./assets/005.jpg">
-      <img src="./assets/006.jpg">
-      <img src="./assets/007.jpg">
-      <img src="./assets/008.jpg">
-      <img src="./assets/009.jpg">
-      <img src="./assets/010.jpg">
-      <img src="./assets/011.jpg">
+      <img src="assets/004.jpg">
+      <img src="assets/005.jpg">
+      <img src="assets/006.jpg">
+      <img src="assets/007.jpg">
+      <img src="assets/008.jpg">
+      <img src="assets/009.jpg">
+      <img src="assets/010.jpg">
+      <img src="assets/011.jpg">
     </div>
 
-    <!-- JSもフルアドレスで指定 -->
-    <script src="https://akksr21.github.io/AKKSR21/viewer/laymic/laymic.iife.min.js"></script>
+    <!-- 2. JSをネット上の公式配信元から読み込む（これで絶対読み込めます） -->
+    <script src="https://cdn.jsdelivr.net/npm/laymic@latest/dist/laymic.iife.min.js"></script>
     
     <script>
-      function startLaymic() {
+      // 読み込みを確認して実行
+      window.addEventListener('load', function() {
         if (typeof Laymic !== 'undefined') {
-          try {
-            new Laymic('#laymic', { direction: 'rtl' });
-            document.getElementById('laymic').style.opacity = 1;
-            console.log("成功しました！");
-          } catch (error) {
-            console.error("エラー:", error);
-          }
+          new Laymic('#laymic', {
+            direction: 'rtl'
+          });
+          document.getElementById('laymic').style.opacity = 1;
+          console.log("ついに成功しました！");
         } else {
-          console.log("再試行中...");
-          setTimeout(startLaymic, 500);
+          alert("ネットからの読み込みにも失敗しました。ネット接続を確認してください。");
         }
-      }
-      window.onload = startLaymic;
+      });
     </script>
 </body>
 </html>
