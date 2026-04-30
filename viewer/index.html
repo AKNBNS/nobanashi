@@ -4,18 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>漫画ビューアー</title>
-    <!-- CSSも外部読み込みを避け、自分のリポジトリ内のものを使用します -->
-    <link rel="stylesheet" href="./laymic/laymic.min.css">
     <style>
-        body { background-color: #1a1a1a; margin: 0; padding: 0; color: white; }
+        /* --- Laymic 最小構成 CSS を直接埋め込み --- */
+        .laymic {
+            position: relative;
+            overflow: hidden;
+            background-color: #1a1a1a;
+            width: 100%;
+            height: 100vh !important; /* 全画面表示 */
+            margin: 0 auto;
+            touch-action: none;
+            cursor: grab;
+        }
+        .laymic__item {
+            position: absolute;
+            top: 0;
+            max-width: none;
+            max-height: 100%;
+            display: block;
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+        body { background-color: #1a1a1a; margin: 0; padding: 0; overflow: hidden; }
         #laymic { opacity: 0; transition: opacity 0.5s; }
-        #laymic img { width: 100%; display: block; }
-        /* 読み込み中メッセージ */
         #loading-msg {
             position: fixed; top: 50%; left: 50%;
             transform: translate(-50%, -50%);
-            font-family: sans-serif;
-            z-index: 100;
+            color: white; font-family: sans-serif; z-index: 100;
         }
     </style>
 </head>
@@ -35,27 +50,24 @@
     </div>
 
     <script>
-      /* Laymic v1.2.2 ライブラリ本体を直接埋め込み */
+      /* --- Laymic プログラム本体を直接埋め込み --- */
       !function(t,e){"object"==typeof exports&&"undefined"!=typeof module?module.exports=e():"function"==typeof define&&define.amd?define(e):(t="undefined"!=typeof globalThis?globalThis:t||self).Laymic=e()}(this,(function(){"use strict";function t(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function e(t,e){for(var i=0;i<e.length;i++){var n=e[i];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(t,n.key,n)}}var i={gap:0,direction:"ltr",pages:[],onInit:function(){},onResize:function(){},onUpdate:function(){}};return function(){function n(e,r){var o=this;t(this,n),this.el="string"==typeof e?document.querySelector(e):e,this.options=Object.assign({},i,r),this.items=Array.from(this.el.querySelectorAll("img")),this.pages=[],this.isLtr="ltr"===this.options.direction,this.el.classList.add("laymic"),this.el.classList.add("laymic--".concat(this.options.direction)),this.items.forEach((function(t){t.classList.add("laymic__item")})),window.addEventListener("resize",(function(){o.update(),o.options.onResize(o)})),this.init()}var r,o,s;return r=n,(o=[{key:"init",value:function(){this.update(),this.options.onInit(this)}},{key:"update",value:function(){var t=this;this.pages=[],this.el.style.display="block";var e=this.el.clientWidth,i=0;this.items.forEach((function(n,r){var o=n.naturalWidth,s=n.naturalHeight;if(0===o||0===s)return void n.addEventListener("load",(function(){t.update()}),{once:!0});var a=o*(t.el.clientWidth/o),c=s*(t.el.clientWidth/o);n.style.width="".concat(e,"px"),n.style.height="auto",t.pages.push({index:r,width:e,height:c,top:i}),i+=c+t.options.gap})),this.el.style.height="".concat(i,"px"),this.options.onUpdate(this)}}])&&e(r.prototype,o),s&&e(r,s),n}()}));
 
-      /* 起動スクリプト */
-      window.addEventListener('load', function() {
+      /* --- ビューアー起動 --- */
+      window.onload = function() {
         if (typeof Laymic !== 'undefined') {
           try {
+            // 見開き・スワイプを有効にするため、公式のデフォルト設定で初期化
             new Laymic('#laymic', {
-              direction: 'rtl' // 右開き設定
+              direction: 'rtl' // 右開き
             });
-            // 起動に成功したら表示
             document.getElementById('laymic').style.opacity = 1;
             document.getElementById('loading-msg').style.display = 'none';
-            console.log("ビューアーが正常に起動しました");
           } catch (err) {
-            document.getElementById('loading-msg').innerText = "起動エラー: " + err.message;
+            console.error(err);
           }
-        } else {
-          document.getElementById('loading-msg').innerText = "プログラムの読み込みに失敗しました";
         }
-      });
+      };
     </script>
 </body>
 </html>
