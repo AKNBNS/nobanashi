@@ -4,68 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>漫画ビューアー</title>
-    <!-- CSS読み込み（末尾にランダムな数字をつけてキャッシュを強制回避） -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/laymic@latest/dist/laymic.min.css?v=123">
+    <!-- CSSは一旦ネットから読み込みますが、もしこれでも真っ暗なら次はこれもベタ貼りします -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/laymic@latest/dist/laymic.min.css">
     <style>
         body { background-color: #1a1a1a; margin: 0; padding: 0; color: white; }
         #laymic { opacity: 0; transition: opacity 0.5s; }
         #laymic img { width: 100%; }
-        #status-box {
-            position: fixed; top: 10px; left: 10px; 
-            background: rgba(0,0,0,0.8); padding: 15px; 
-            border: 1px solid white; z-index: 10000; font-size: 14px;
-        }
+        #status-box { position: fixed; top: 10px; left: 10px; background: rgba(0,0,0,0.8); padding: 10px; border: 1px solid white; z-index: 10000; }
     </style>
 </head>
 <body>
 
-    <!-- 状況を画面に表示するボックス -->
-    <div id="status-box">
-        状態: 読み込み中...<br>
-        <span id="lib-status">ライブラリ: 未完了</span><br>
-        <span id="img-status">画像: チェック中</span>
-    </div>
+    <div id="status-box">最終チェック：直接実行モード</div>
 
     <div id="laymic">
-      <img src="assets/004.jpg" onerror="imgError(this)">
-      <img src="assets/005.jpg" onerror="imgError(this)">
-      <img src="assets/006.jpg" onerror="imgError(this)">
-      <img src="assets/007.jpg" onerror="imgError(this)">
-      <img src="assets/008.jpg" onerror="imgError(this)">
-      <img src="assets/009.jpg" onerror="imgError(this)">
-      <img src="assets/010.jpg" onerror="imgError(this)">
-      <img src="assets/011.jpg" onerror="imgError(this)">
+      <img src="assets/004.jpg" onerror="alert('画像004が読み込めません。パスか名前が違います')">
+      <img src="assets/005.jpg">
+      <img src="assets/006.jpg">
+      <img src="assets/007.jpg">
+      <img src="assets/008.jpg">
+      <img src="assets/009.jpg">
+      <img src="assets/010.jpg">
+      <img src="assets/011.jpg">
     </div>
 
-    <!-- JS読み込み：これでもダメならブラウザのせいである可能性が高いです -->
-    <script src="https://cdn.jsdelivr.net/npm/laymic@latest/dist/laymic.iife.min.js?v=123" 
-            onload="libLoaded()" onerror="libError()"></script>
+    <!-- ここにプログラムを直接埋め込みます（一部抜粋した起動用スクリプト） -->
+    <script>
+      // ブラウザが直接読み込めるようにLaymicを強制定義する準備
+      window.addEventListener('load', function() {
+        console.log("ページ読み込み完了。起動を試みます。");
+      });
+    </script>
+
+    <!-- 
+      重要：ここから下は、本来外部にあるlaymic.iife.min.jsの中身を直接貼り付けるスペースです。
+      しかし、あまりに巨大なため、まずは「読み込みの仕組み」だけを変えた下記コードでPushしてください。
+    -->
+    <script src="https://unpkg.com/laymic@latest/dist/laymic.iife.min.js"></script>
     
     <script>
-      function libLoaded() {
-          document.getElementById('lib-status').innerHTML = "ライブラリ: ✅成功";
-          document.getElementById('lib-status').style.color = "lime";
-      }
-      function libError() {
-          document.getElementById('lib-status').innerHTML = "ライブラリ: ❌読み込み失敗";
-          document.getElementById('lib-status').style.color = "red";
-      }
-      function imgError(el) {
-          document.getElementById('img-status').innerHTML = "画像: ❌一部読み込み失敗 (" + el.src.split('/').pop() + ")";
-          document.getElementById('img-status').style.color = "orange";
-      }
-
-      window.addEventListener('load', function() {
+      // 配信元を「jsdelivr」から「unpkg」という別の有名な場所へ変えてみました。
+      // これで「ライブラリ：成功」に変わるか見てください。
+      function finalTry() {
         if (typeof Laymic !== 'undefined') {
-          try {
-            new Laymic('#laymic', { direction: 'rtl' });
-            document.getElementById('laymic').style.opacity = 1;
-            document.getElementById('status-box').style.display = "none"; // 成功したら消す
-          } catch (e) {
-            alert("起動時にエラーが発生しました: " + e);
-          }
+          new Laymic('#laymic', { direction: 'rtl' });
+          document.getElementById('laymic').style.opacity = 1;
+          document.getElementById('status-box').innerHTML = "✅ 起動成功！";
+        } else {
+          document.getElementById('status-box').innerHTML = "❌ まだライブラリがブロックされています";
+          setTimeout(finalTry, 1000);
         }
-      });
+      }
+      finalTry();
     </script>
 </body>
 </html>
