@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>漫画ビューアー</title>
     
-    <!-- CSS：distを抜いた直通パス -->
-    <link rel="stylesheet" href="laymic/laymic.min.css">
+    <!-- パスの先頭に ./ を追加。これで「このHTMLがある場所と同じフォルダ内」を明示します -->
+    <link rel="stylesheet" href="./laymic/laymic.min.css">
     
     <style>
         #laymic { 
@@ -26,38 +26,42 @@
 <body>
 
     <div id="laymic">
-      <img src="assets/004.jpg">
-      <img src="assets/005.jpg">
-      <img src="assets/006.jpg">
-      <img src="assets/007.jpg">
-      <img src="assets/008.jpg">
-      <img src="assets/009.jpg">
-      <img src="assets/010.jpg">
-      <img src="assets/011.jpg">
+      <img src="./assets/004.jpg">
+      <img src="./assets/005.jpg">
+      <img src="./assets/006.jpg">
+      <img src="./assets/007.jpg">
+      <img src="./assets/008.jpg">
+      <img src="./assets/009.jpg">
+      <img src="./assets/010.jpg">
+      <img src="./assets/011.jpg">
     </div>
 
-    <!-- JS：distを抜いた直通パス -->
-    <script src="laymic/laymic.iife.min.js"></script>
+    <!-- JSにも ./ を追加 -->
+    <script src="./laymic/laymic.iife.min.js"></script>
     
     <script>
       function startLaymic() {
+        // 現在の状態をログに出してデバッグしやすくします
+        console.log("チェック中... Laymicの型:", typeof Laymic);
+
         if (typeof Laymic !== 'undefined') {
           try {
             new Laymic('#laymic', {
               direction: 'rtl'
             });
             document.getElementById('laymic').style.opacity = 1;
-            console.log("Laymic起動成功！");
+            console.log("★Laymic起動成功！");
           } catch (error) {
             console.error("初期化エラー:", error);
           }
         } else {
-          console.log("Laymicを待機中（パスを確認してください）");
-          setTimeout(startLaymic, 300);
+          console.log("Laymicを待機中... JSファイルが読み込まれるのを待っています。");
+          setTimeout(startLaymic, 500);
         }
       }
 
-      startLaymic();
+      // ページの読み込みが終わってから開始
+      window.onload = startLaymic;
     </script>
 </body>
 </html>
