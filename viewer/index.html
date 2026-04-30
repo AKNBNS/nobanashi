@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>漫画ビューアー</title>
-    
-    <!-- CSSの読み込み：distフォルダの中のファイルを指定します -->
+    <!-- CSSのパスを確認 -->
     <link rel="stylesheet" href="laymic/dist/laymic.min.css">
+    <style>
+        /* 読み込み前に画像がバラバラに表示されるのを防ぐ */
+        #laymic { opacity: 0; }
+        #laymic img { width: 100%; }
+    </style>
 </head>
 <body>
 
-    <!-- 漫画の表示エリア：assetsフォルダの中の画像を指定します -->
     <div id="laymic">
       <img src="assets/004.jpg">
       <img src="assets/005.jpg">
@@ -20,17 +23,23 @@
       <img src="assets/009.jpg">
       <img src="assets/010.jpg">
       <img src="assets/011.jpg">
-      <!-- 必要な分だけ img タグを並べます -->
     </div>
 
-    <!-- JSの読み込み：distフォルダの中のファイルを指定します -->
+    <!-- JSのパスを「laymic.iife.min.js」に正確に合わせる -->
     <script src="laymic/dist/laymic.iife.min.js"></script>
     
     <script>
-      // Laymicの実行
-      new Laymic('#laymic', {
-        // オプションが必要な場合はここに書きます（例：見開き設定など）
-        // direction: 'rtl' // 右から左（縦書き漫画用）
+      // 画面の準備が完全に整ってから実行する
+      window.addEventListener('load', function() {
+        try {
+          new Laymic('#laymic', {
+            direction: 'rtl'
+          });
+          // 成功したら表示する
+          document.getElementById('laymic').style.opacity = 1;
+        } catch (e) {
+          console.error("Laymicの起動に失敗しました:", e);
+        }
       });
     </script>
 </body>
