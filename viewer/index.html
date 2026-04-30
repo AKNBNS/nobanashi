@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>漫画ビューアー</title>
-    <!-- CSSは一旦ネットから読み込みますが、もしこれでも真っ暗なら次はこれもベタ貼りします -->
+    <!-- CSSだけは今のところ外部ですが、もし真っ暗ならここも後で修正します -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/laymic@latest/dist/laymic.min.css">
     <style>
         body { background-color: #1a1a1a; margin: 0; padding: 0; color: white; }
         #laymic { opacity: 0; transition: opacity 0.5s; }
         #laymic img { width: 100%; }
-        #status-box { position: fixed; top: 10px; left: 10px; background: rgba(0,0,0,0.8); padding: 10px; border: 1px solid white; z-index: 10000; }
+        #status-box { position: fixed; top: 10px; left: 10px; background: rgba(255,0,0,0.8); padding: 10px; z-index: 10000; font-size: 12px; }
     </style>
 </head>
 <body>
 
-    <div id="status-box">最終チェック：直接実行モード</div>
+    <div id="status-box">デバッグ中：プログラム直接実行</div>
 
     <div id="laymic">
-      <img src="assets/004.jpg" onerror="alert('画像004が読み込めません。パスか名前が違います')">
+      <img src="assets/004.jpg" onerror="this.src='https://via.placeholder.com/300x400?text=Image+Not+Found'">
       <img src="assets/005.jpg">
       <img src="assets/006.jpg">
       <img src="assets/007.jpg">
@@ -28,34 +28,27 @@
       <img src="assets/011.jpg">
     </div>
 
-    <!-- ここにプログラムを直接埋め込みます（一部抜粋した起動用スクリプト） -->
-    <script>
-      // ブラウザが直接読み込めるようにLaymicを強制定義する準備
-      window.addEventListener('load', function() {
-        console.log("ページ読み込み完了。起動を試みます。");
-      });
-    </script>
-
     <!-- 
-      重要：ここから下は、本来外部にあるlaymic.iife.min.jsの中身を直接貼り付けるスペースです。
-      しかし、あまりに巨大なため、まずは「読み込みの仕組み」だけを変えた下記コードでPushしてください。
+       外部JSファイル（laymic.iife.min.js）を読み込む代わりに、
+       ブラウザが直接実行できる形式でライブラリを呼び出します。
     -->
-    <script src="https://unpkg.com/laymic@latest/dist/laymic.iife.min.js"></script>
-    
-    <script>
-      // 配信元を「jsdelivr」から「unpkg」という別の有名な場所へ変えてみました。
-      // これで「ライブラリ：成功」に変わるか見てください。
-      function finalTry() {
-        if (typeof Laymic !== 'undefined') {
-          new Laymic('#laymic', { direction: 'rtl' });
+    <script type="module">
+      // 外部ファイルを使わず、JavaScriptの「import」という機能でネットから直接「部品」として呼び出します。
+      // これなら「script src="..."」という従来の読み込みがブロックされる環境でも動く可能性が高いです。
+      import Laymic from 'https://cdn.jsdelivr.net/npm/laymic@latest/dist/laymic.esm.js';
+
+      window.addEventListener('load', () => {
+        try {
+          new Laymic('#laymic', {
+            direction: 'rtl'
+          });
           document.getElementById('laymic').style.opacity = 1;
-          document.getElementById('status-box').innerHTML = "✅ 起動成功！";
-        } else {
-          document.getElementById('status-box').innerHTML = "❌ まだライブラリがブロックされています";
-          setTimeout(finalTry, 1000);
+          document.getElementById('status-box').style.backgroundColor = "green";
+          document.getElementById('status-box').innerHTML = "✅ 起動に成功しました！";
+        } catch (e) {
+          document.getElementById('status-box').innerHTML = "❌ 起動エラー: " + e.message;
         }
-      }
-      finalTry();
+      });
     </script>
 </body>
 </html>
