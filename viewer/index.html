@@ -8,6 +8,17 @@
 <link rel="stylesheet" href="./laymic/dist/laymic.min.css">
 <script src="./laymic/dist/laymic.iife.min.js"></script>
 
+<style>
+html, body {
+  margin: 0;
+  height: 100%;
+}
+#viewer {
+  width: 100%;
+  height: 100vh;
+}
+</style>
+
 </head>
 
 <body>
@@ -16,7 +27,7 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  new laymic({
+  new Laymic({
     el: "#viewer",
     pages: [
       "./assets/004.jpg",
