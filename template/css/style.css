@@ -803,6 +803,8 @@ a#totop:hover:before {
   h2 {
     font-size: 40px;
   }
+
+  /* 見出し下の棒線消しちゃう----
   h2:after {
     content: '';
     display: block;
@@ -811,6 +813,8 @@ a#totop:hover:before {
     background: black;
     margin: 10px auto 40px;
   }
+  -------*/
+  
   h3 {
     font-size: 24px;
   }
