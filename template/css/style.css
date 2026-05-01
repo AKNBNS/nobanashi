@@ -8,9 +8,7 @@
   リセットCSS
   基本的には触らないでください
   ========================================== */
-/* フォント設定を維持 */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500&family=Kosugi&display=swap");
 input[type="submit"] {
   -webkit-appearance: none;
   border-radius: 0;
@@ -148,7 +146,7 @@ ul.list li:before {
   display: block;
   width: 8px;
   height: 8px;
-  background: #ffc400;
+  background: #9ed200;
   position: absolute;
   margin: auto;
   top: 9px;
@@ -172,12 +170,12 @@ ol.list li:before {
   position: absolute;
   counter-increment: number;
   content: counter(number);
-  font-family: "Noto Serif JP", "YuMincho", "Hiragino Mincho ProN";
+  font-family: "Josefin Sans", "Kosugi", cursive;
   position: absolute;
   margin: auto;
   top: 6px;
   left: -25px;
-  background: #ffc400;
+  background: #9ed200;
   width: 18px;
   height: 18px;
   border-radius: 2px;
@@ -197,7 +195,7 @@ dl.list dt:before {
   display: block;
   width: 8px;
   height: 8px;
-  background: #ffc400;
+  background: #9ed200;
   position: absolute;
   margin: auto;
   top: 9px;
@@ -221,7 +219,7 @@ strong.large {
 }
 
 strong.marker {
-  background: #ffd700;
+  background: #f1fc40;
 }
 
 .wrap {
@@ -252,30 +250,29 @@ strong.marker {
   margin-bottom: 30px;
 }
 
-/* 見出し：編集後のフォントを維持しつつ配置を戻す */
 h1 {
-  font-family: "Noto Serif JP", "YuMincho", "Hiragino Mincho ProN";
+  font-family: "Josefin Sans", "Kosugi", cursive;
 }
 
 h2 {
-  font-family: "Noto Serif JP", "YuMincho", "Hiragino Mincho ProN";
-  text-align: left;
+  font-family: "Josefin Sans", "Kosugi", cursive;
+  text-align: center;
 }
 
 h3 {
-  font-family: "Noto Serif JP", "YuMincho", "Hiragino Mincho ProN";
-  border-left: 3px solid #ffc400;
+  font-family: "Josefin Sans", "Kosugi", cursive;
+  border-left: 3px solid #9ed200;
   padding: 0px 15px;
   margin: 2em 0 1em;
 }
 
 h4 {
-  font-family: "Noto Serif JP", "YuMincho", "Hiragino Mincho ProN";
-  margin: 0.5em 0 0em;
+  font-family: "Josefin Sans", "Kosugi", cursive;
+  margin: 2em 0 0em;
 }
 
 h5 {
-  font-family: "Noto Serif JP", "YuMincho", "Hiragino Mincho ProN";
+  font-family: "Josefin Sans", "Kosugi", cursive;
   font-size: 18px;
   margin: 10px auto 5px;
 }
@@ -317,7 +314,7 @@ table.center {
 }
 
 .box {
-  background: #ffd700;
+  background: #f1fc40;
   margin: 2em 0;
   padding: 15px;
 }
@@ -331,14 +328,14 @@ table.center {
 }
 
 a {
-  color: #ffc400;
+  color: #9ed200;
   text-decoration: none;
   -webkit-transition: color .3s;
   transition: color .3s;
 }
 
 a:focus, a:visited, a:active {
-  color: #ffc400;
+  color: #9ed200;
 }
 
 a:hover {
@@ -352,7 +349,7 @@ ul ul {
 
 a.btn {
   display: block;
-  background: #ffc400;
+  background: #9ed200;
   color: black;
   padding: 10px 30px;
   text-align: center;
@@ -366,11 +363,11 @@ a.btn {
 }
 
 a.btn:hover {
-  background: #ffd700;
+  background: #f1fc40;
 }
 
 p {
-  margin: 0.5em 0;
+  margin: 1.5em 0;
 }
 
 dl.news {
@@ -403,14 +400,14 @@ nav#globalnav {
 }
 
 nav#globalnav .globalnav_bg {
-  height: 120px;
+  height: 70px;
   width: 100%;
   position: absolute;
   top: 0;
   z-index: -1;
   opacity: 1;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(5%, rgba(230, 230, 230, 0)), color-stop(51%, rgba(255, 255, 255, 0.9)));
-  background: linear-gradient(0deg, rgba(230, 230, 230, 0) 5%, rgba(255, 255, 255, 0.95) 51%);
+  background: linear-gradient(0deg, rgba(230, 230, 230, 0) 5%, rgba(255, 255, 255, 0.9) 51%);
 }
 
 nav#globalnav h1 a {
@@ -418,11 +415,10 @@ nav#globalnav h1 a {
   display: block;
   padding: 18px 15px;
   font-size: 30px;
-  font-family: "Noto Serif JP", "YuMincho", "Hiragino Mincho ProN", serif;
 }
 
 nav#globalnav h1 a:hover {
-  color: #ffc400;
+  color: #9ed200;
 }
 
 nav#globalnav p#menubtn {
@@ -447,7 +443,7 @@ nav#globalnav ul li a {
 }
 
 nav#globalnav ul li a:hover {
-  color: #ffc400;
+  color: #9ed200;
 }
 
 nav#globalnav ul#navmenu {
@@ -491,24 +487,23 @@ nav#globalnav.colorchange h1 a {
 }
 
 nav#globalnav.colorchange h1 a:hover {
-  color: #ffc400;
+  color: #9ed200;
 }
 
 nav#globalnav.colorchange p#menubtn {
   color: #ffffff;
 }
 
-/* ヘッダー高さ：編集後の数値を維持 */
 header {
-  height: 60vh;
-  max-height: 400px;
+  background-color: #000000;
+  height: 100vh;
 }
 
 header img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-       object-fit: cover;
+     object-fit: cover;
 }
 
 header img.top-pc {
@@ -601,7 +596,7 @@ ul.illust li a img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-       object-fit: cover;
+     object-fit: cover;
 }
 
 .card-wrapper {
@@ -627,7 +622,7 @@ ul.illust li a img {
   width: 200px;
   height: 200px;
   -o-object-fit: cover;
-       object-fit: cover;
+     object-fit: cover;
   border-radius: 50%;
   margin: 20px auto 10px;
 }
@@ -671,7 +666,7 @@ footer ul.menu li a {
 }
 
 footer ul.menu li a:hover {
-  color: #ffd700;
+  color: #f1fc40;
 }
 
 footer ul.menu ul {
@@ -685,7 +680,7 @@ footer p#copyright {
 }
 
 footer p#copyright a:hover {
-  color: #ffd700;
+  color: #f1fc40;
 }
 
 form.mailform {
@@ -708,7 +703,7 @@ form.mailform textarea {
   background: #fcfcfc;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  font-family: "Noto Serif JP", "YuMincho", "Hiragino Mincho ProN";
+  font-family: "Josefin Sans", "Kosugi", cursive;
 }
 
 form.mailform textarea:focus {
@@ -727,7 +722,7 @@ form.mailform input {
   background: #fcfcfc;
   -webkit-transition: background 0.3s;
   transition: background 0.3s;
-  font-family: "Noto Serif JP", "YuMincho", "Hiragino Mincho ProN";
+  font-family: "Josefin Sans", "Kosugi", cursive;
 }
 
 form.mailform input:focus {
@@ -740,12 +735,12 @@ form.mailform input[type="submit"] {
   max-width: 200px;
   margin: 20px auto 20px;
   padding: 15px 20px;
-  background: #ffc400;
+  background: #9ed200;
   border: none;
 }
 
 form.mailform input[type="submit"]:focus, form.mailform input[type="submit"]:hover {
-  background: #ffd700;
+  background: #f1fc40;
   cursor: pointer;
 }
 
@@ -757,7 +752,7 @@ a#totop {
   right: 0;
   width: 60px;
   height: 60px;
-  background: #ffc400;
+  background: #9ed200;
 }
 
 a#totop:before {
@@ -813,9 +808,16 @@ a#totop:hover:before {
     padding: 80px 0;
   }
   h2 {
-    font-size: 30px;
+    font-size: 40px;
   }
-
+  h2:after {
+    content: '';
+    display: block;
+    width: 62px;
+    height: 4px;
+    background: black;
+    margin: 10px auto 40px;
+  }
   h3 {
     font-size: 24px;
   }
@@ -836,10 +838,8 @@ a#totop:hover:before {
   p#menubtn {
     display: none;
   }
-  /* ヘッダー高さ：編集後の数値を維持 */
   header {
-    height: 60vh;
-    max-height: 400px;
+    max-height: 600px;
   }
   header img.top-pc {
     display: block;
@@ -853,21 +853,14 @@ a#totop:hover:before {
     z-index: 9;
   }
   nav#globalnav h1 a {
-    font-size: 40px;
+    font-size: 35px;
   }
-
-  nav#globalnav .container {
-    max-width: 100%;
-    margin: 0;
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
   nav#globalnav > .container {
+    display: -webkit-box;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
   }
-
   nav#globalnav ul {
     display: -webkit-box;
     display: flex;
@@ -944,7 +937,7 @@ a#totop:hover:before {
     font-size: 20px;
   }
   nav#globalnav ul#navmenu li a:hover {
-    color: #ffc400;
+    color: #9ed200;
   }
   nav#globalnav.colorchange ul#navmenu li a {
     color: #ffffff;
@@ -952,7 +945,7 @@ a#totop:hover:before {
             filter: drop-shadow(0px 0px 3px #00000066);
   }
   nav#globalnav.colorchange ul#navmenu li a:hover {
-    color: #ffc400;
+    color: #9ed200;
   }
   ul.illust li {
     position: relative;
@@ -989,15 +982,3 @@ a#totop:hover:before {
     width: 31%;
   }
 }
-
-  nav#globalnav .container {
-    max-width: 100% !important;
-    width: 100% !important;
-    margin: 0 !important;
-    padding-left: 30px !important;
-    padding-right: 30px !important;
-  }
-
-  nav#globalnav h1 a {
-    padding-left: 0;
-  }
