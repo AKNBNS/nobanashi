@@ -1,14 +1,6 @@
 @charset "UTF-8";
-/* ==========================================
-   Template: modern（https://do.gt-gt.org/）
-   Copyright: 2020 do.
-   利用規約を遵守の上お使いください。二次配布・販売を禁じます
-   ========================================== */
-/* ==========================================
-  リセットCSS
-  基本的には触らないでください
-  ========================================== */
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500&family=Kosugi&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500&family=Kiwi+Maru&family=Kosugi&family=Zen+Kurenaido&family=Zen+Maru+Gothic&display=swap");
 input[type="submit"] {
   -webkit-appearance: none;
   border-radius: 0;
@@ -170,7 +162,7 @@ ol.list li:before {
   position: absolute;
   counter-increment: number;
   content: counter(number);
-  font-family: "Josefin Sans", "Kosugi", cursive;
+  font-family: "Kiwi Maru", "Zen Maru Gothic", "Zen Kurenaido", serif;
   position: absolute;
   margin: auto;
   top: 6px;
@@ -251,28 +243,28 @@ strong.marker {
 }
 
 h1 {
-  font-family: "Josefin Sans", "Kosugi", cursive;
+  font-family: "Kiwi Maru", "Zen Maru Gothic", "Zen Kurenaido", serif;
 }
 
 h2 {
-  font-family: "Josefin Sans", "Kosugi", cursive;
+  font-family: "Kiwi Maru", "Zen Maru Gothic", "Zen Kurenaido", serif;
   text-align: center;
 }
 
 h3 {
-  font-family: "Josefin Sans", "Kosugi", cursive;
+  font-family: "Kiwi Maru", "Zen Maru Gothic", "Zen Kurenaido", serif;
   border-left: 3px solid #9ed200;
   padding: 0px 15px;
   margin: 2em 0 1em;
 }
 
 h4 {
-  font-family: "Josefin Sans", "Kosugi", cursive;
+  font-family: "Kiwi Maru", "Zen Maru Gothic", "Zen Kurenaido", serif;
   margin: 2em 0 0em;
 }
 
 h5 {
-  font-family: "Josefin Sans", "Kosugi", cursive;
+  font-family: "Kiwi Maru", "Zen Maru Gothic", "Zen Kurenaido", serif;
   font-size: 18px;
   margin: 10px auto 5px;
 }
@@ -703,7 +695,7 @@ form.mailform textarea {
   background: #fcfcfc;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  font-family: "Josefin Sans", "Kosugi", cursive;
+  font-family: "Kiwi Maru", "Zen Maru Gothic", "Zen Kurenaido", serif;
 }
 
 form.mailform textarea:focus {
@@ -722,7 +714,7 @@ form.mailform input {
   background: #fcfcfc;
   -webkit-transition: background 0.3s;
   transition: background 0.3s;
-  font-family: "Josefin Sans", "Kosugi", cursive;
+  font-family: "Kiwi Maru", "Zen Maru Gothic", "Zen Kurenaido", serif;
 }
 
 form.mailform input:focus {
