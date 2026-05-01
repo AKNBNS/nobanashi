@@ -981,3 +981,12 @@ a#totop:hover:before {
 .about-section .container {
   text-align: center;
 }
+
+/* ナビゲーションメニューのフォント変更 */
+nav#globalnav ul#navmenu li a {
+  font-family: "Kiwi Maru", "Zen Maru Gothic", "Zen Kurenaido", serif;
+}
+/* スマホ版のメニューフォントも念のため指定 */
+nav#globalnav ul li a {
+  font-family: "Kiwi Maru", "Zen Maru Gothic", "Zen Kurenaido", serif;
+}
