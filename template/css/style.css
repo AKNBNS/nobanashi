@@ -1076,6 +1076,6 @@ nav#globalnav .top-news-box::-webkit-scrollbar {
 
   nav#globalnav .top-news-box {
     margin-left: auto;  /* ★これがポイント！メニューとの間を最大まで開けて右端に飛ばす */
-    margin-right: 15;    /* 右端ピタッ */
+    margin-right: 15px;    /* 右端ピタッ */
   }
 }
