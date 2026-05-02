@@ -1062,13 +1062,31 @@ nav#globalnav .top-news-box::-webkit-scrollbar {
   margin-bottom: 0;
 }
 
-@media only screen and (min-width: 768px) {
+/* --- 修正版：ナビゲーション内：更新情報ボックス --- */
+
+/* デフォルト（1500px未満）では非表示にする */
+nav#globalnav .top-news-box {
+  display: none;
+}
+
+/* 1500px以上の時だけ表示して、位置を指定する */
+@media only screen and (min-width: 1500px) {
   nav#globalnav .top-news-box {
-    position: fixed;   /* 画面（ウィンドウ）に対して固定 */
+    display: block; /* 非表示を解除 */
+    position: fixed;   /* ウィンドウに対して固定 */
     left: auto;
-    right: 20px;       /* ウィンドウ右端から20pxの位置 */
-    top: 19px;         /* 上からの位置（ロゴの高さに合わせる） */
-    margin: 0;         /* 余計な余白をリセット */
-    z-index: 100;      /* 他の要素より上に表示 */
+    right: 20px;       /* 右端から20px */
+    top: 19px;         /* 上から19px */
+    width: 220px;
+    height: 32px;
+    padding: 0 12px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    z-index: 100;
   }
 }
