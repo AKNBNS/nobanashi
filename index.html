@@ -12,10 +12,12 @@
 </head>
 
 <body>
-<!-- navの中の container に 「nav-flex」を付け足します -->
+
 <nav id="globalnav" class="colorchange">
   <div class="globalnav_bg"></div>
-  <div class="container nav-flex"> <!-- ★ここを nav-flex に変更、または追加 -->
+  
+  <!-- ここに nav-flex という枠を追加しました -->
+  <div class="container nav-flex"> 
     
     <h1 class="logo"><a href="#">のばなし園</a></h1>
     
@@ -27,9 +29,8 @@
       <li><a href="index.html#contact">お問合せ先</a></li>
     </ul>
 
-    <!-- ニュースボックス -->
     <div class="top-news-box">
-      <dl class="news-inline"> <!-- 前述した通り dl/dd に整理すると綺麗です -->
+      <dl class="news-inline">
         <dd><span>2026.06.20</span>ウェブサイト開設。</dd>
         <dd><span>2026.06.20</span>2行目のテスト。</dd>
       </dl>
@@ -42,12 +43,9 @@
   <img src="img/top.jpg" alt="TEMPLATE" class="top-pc">
   <img src="img/top.jpg" alt="TEMPLATE" class="top-phone">
 </header>
-<!--
-スマホの時トップ画像を切り替える場合2行目class="top-phone
- -->
-<main>
 
-  <section class="about-section"> <!-- ABOUTセクションはじまり -->
+<main>
+  <section class="about-section">
     <div class="container">
       <h2 id="about">ご 案 内</h2>
       <h4>このウェブサイトについて</h4>
@@ -55,91 +53,51 @@
        This is an unofficial fan site.<br> All images and text on this site are created as a personal hobby and are not affiliated with, endorsed by, or associated with the original creators or any official entities.</p>
       <h4>禁止事項</h4>
       <p>サイト内に掲載された画像・文章の無断転載・無断利用、及びAI学習使用を禁止します。<br>
-      Unauthorized reproduction, redistribution, or use of any content on this site, including use for AI training, is strictly prohibited.</p>
-
+        Unauthorized reproduction, redistribution, or use of any content on this site, including use for AI training, is strictly prohibited.</p>
     </div>
-  </section> <!-- ABOUTセクションおわり -->
+  </section>
 
-
-
-  
-  <section> <!-- GALLERYセクションはじまり -->
+  <section>
     <div class="container">
-
       <h2 id="gallery">展 示 物</h2>
-
       <ul class="illust">
         <li><a href="img/01.jpg" data-lightbox="illust" data-title="ここに説明"><img src="img/01-s.jpg"></a></li>
       </ul>
-      
       <ul class="illust">
         <li><a href="/nobanashi/manga/sample/" rel="noopener noreferrer"><img src="img/s_manga_sample.jpg"></a></li>
         <li><a href="/nobanashi/manga/michi/" rel="noopener noreferrer"><img src="img/s_manga_michi.jpg"></a></li>
         <li><a href="/nobanashi/manga/benkyo/" rel="noopener noreferrer"><img src="img/s_manga_benkyo.jpg"></a></li>
       </ul>
-
-
     </div>
+  </section>
+</main>
 
-  </section> <!-- GALLERYセクションおわり -->
-
-
-
-  
-
-<!-- 最上部に戻るボタン -->
 <a href="#" id="totop"></a>
-<!-- 最上部に戻るボタン終わり -->
 
-
-
-  
-<!-- フッター-->
 <footer>
 <div class="container">
-
-  <div class="wrap-3col">  <!-- wrap-3colここから -->
-
+  <div class="wrap-3col">
     <div class="inner">
       <h1 id="contact">のばなし園</h1>
       <p class="memo">https://aknbns.github.io/nobanashi/<br>
-      管理者名　あこう<br>
-      メールアドレス　</p>
+      管理者名 あこう<br>
+      メールアドレス </p>
       <p class="memo">リンクフリー・etc...<br>
       サイトについての情報を書いてもいい感じ<br></p>
     </div>
-
     <div class="inner">
       <h4>SNS</h4>
       <div class="footer-sns">
-        <!-- Twitter -->
-        <a href="https://x.com/AKOUverF" target="_blank" rel="noopener noreferrer">
-          <img src="img/logo_twitter.png" alt="Twitter">
-        </a>
-        
-        <!-- Bluesky -->
-        <a href="https://bsky.app/profile/akou-ver-f.bsky.social" target="_blank" rel="noopener noreferrer">
-          <img src="img/logo_bluesky.png" alt="Bluesky">
-        </a>
-        
-        <!-- pixiv -->
-        <a href="https://www.pixiv.net/users/133677" target="_blank" rel="noopener noreferrer">
-          <img src="img/logo_pixiv.png" alt="pixiv">
-        </a>
+        <a href="https://x.com/AKOUverF" target="_blank" rel="noopener noreferrer"><img src="img/logo_twitter.png" alt="Twitter"></a>
+        <a href="https://bsky.app/profile/akou-ver-f.bsky.social" target="_blank" rel="noopener noreferrer"><img src="img/logo_bluesky.png" alt="Bluesky"></a>
+        <a href="https://www.pixiv.net/users/133677" target="_blank" rel="noopener noreferrer"><img src="img/logo_pixiv.png" alt="pixiv"></a>
       </div>
     </div>
-
-
-
-  </div>  <!-- wrap-3colここまで -->
-<!-- フッター終わり -->
-
-
+  </div>
 </div>
 </footer>
 
 <script src="js/common.js"></script>
 <script src="js/lightbox.js"></script>
 </body>
-
 </html>
