@@ -12,27 +12,27 @@
 </head>
 
 <body>
+<!-- navの中の container に 「nav-flex」を付け足します -->
 <nav id="globalnav" class="colorchange">
   <div class="globalnav_bg"></div>
-  <div class="container">
-    <h1 class="logo"><a href="#">のばなし園</a></h1>
+  <div class="container nav-flex"> <!-- ★ここを nav-flex に変更、または追加 -->
     
+    <h1 class="logo"><a href="#">のばなし園</a></h1>
     
     <p id="menubtn">&#9776;</p>
 
-    <!-- メニューリスト -->
     <ul id="navmenu">
       <li><a href="index.html#about">ご案内</a></li>
       <li><a href="index.html#gallery">展示物</a></li>
       <li><a href="index.html#contact">お問合せ先</a></li>
     </ul>
 
-    <!-- ここに移動：一番右（メニューのあと）に配置 -->
+    <!-- ニュースボックス -->
     <div class="top-news-box">
-      <div class="news-inline">
-        <dd><span>2026.06.20</span>　ウェブサイト開設。</dd><br>
+      <dl class="news-inline"> <!-- 前述した通り dl/dd に整理すると綺麗です -->
+        <dd><span>2026.06.20</span>ウェブサイト開設。</dd>
         <dd><span>2026.06.20</span>2行目のテスト。</dd>
-      </div>
+      </dl>
     </div>
 
   </div>
