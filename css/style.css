@@ -1012,93 +1012,45 @@ nav#globalnav ul li a {
 
 
 
-/* --- ナビゲーション内：更新情報ボックスの最終調整 --- */
 
-/* コンテナの中身を整列させる */
-nav#globalnav .container {
-  display: flex;
-  align-items: center; /* 縦方向の真ん中 */
-}
-
-/* ボックスの基本スタイル */
-nav#globalnav .top-news-box {
-  width: 220px;
-  height: 32px;
-  padding: 0 12px;
-  margin-left: 20px; /* ロゴからの距離 */
-  
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  
-  overflow-y: scroll;
-  scrollbar-width: none;
-  z-index: 10;
-}
-
-/* --- ナビゲーション内：更新情報ボックス（DD一本化Ver） --- */
-
-/* 共通：スクロールバーを消す */
-nav#globalnav .top-news-box::-webkit-scrollbar {
-  display: none;
-}
-
-/* ニュース内の文字・間隔調整 */
-.news-inline {
-  margin: 0;
-  padding: 0;
-  line-height: 32px;
-}
-
-.news-inline dd {
-  display: block;      /* 1件ごとに改行 */
-  margin: 0;           /* 余白をリセット（これで隙間が消えます） */
-  padding: 0;
-  font-size: 11px;
-  color: inherit;      /* 親の文字色（白か黒か）を引き継ぐ */
-  white-space: nowrap; /* 日付と内容が途中で改行されるのを防ぐ */
-}
-
-/* 日付部分のスタイル調整 */
-.news-inline dd span {
-  font-weight: bold;
-  margin-right: 8px;   /* 日付と本文の間のスキマ（お好みで調整） */
-}
-
-
-
-
-
-/* --- 配置設定：ボックスを右端へ、メニューをその左へ --- */
-
-/* デフォルト（スマホ等）では非表示 */
-nav#globalnav .top-news-box {
-  display: none;
-}
+/* --- ナビゲーション全体のレイアウト修正 --- */
 
 @media only screen and (min-width: 768px) {
-  /* 親要素：ロゴ・メニュー・ボックスを横一列に */
-  nav#globalnav .container {
+  /* containerの幅制限を解除して画面いっぱいに広げる */
+  nav#globalnav > .container {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* 両端に広げる */
+    justify-content: flex-start; /* 左詰めを基本にする */
+    max-width: 100% !important;  /* 画面端まで使えるように強制 */
+    padding: 0 40px;             /* 画面端にピッタリくっつきすぎないよう余白 */
   }
 
-  /* メニューを右側に寄せる */
+  /* ロゴの設定 */
+  nav#globalnav h1.logo {
+    margin-right: 30px; 
+  }
+
+  /* メニューリスト：ここを auto にしないのがポイント */
   nav#globalnav ul#navmenu {
-    margin-left: auto; /* ロゴとメニューの間に空白を作る */
-    margin-right: 20px; /* 更新情報ボックスとの間の距離 */
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin: 0; 
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+    width: auto;
+    right: auto;
   }
 
-  /* 更新情報ボックスを一番右端に */
+  /* ★ 更新情報ボックス：これを本当の右端へ飛ばす */
   nav#globalnav .top-news-box {
     display: block;
-    flex-shrink: 0; /* ボックスが潰れないように固定 */
-    width: 220px;
+    margin-left: auto; /* 左側に全余白を抱え込むことで右端へ移動 */
+    flex-shrink: 0;    /* ボックスが潰れないように固定 */
+    width: 250px;      /* 少し幅を広げると見やすいです */
     height: 32px;
-    padding: 0 12px;
+    padding: 0 15px;
     
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(8px);
@@ -1110,6 +1062,19 @@ nav#globalnav .top-news-box {
     scrollbar-width: none;
     z-index: 100;
   }
+}
+
+/* ニュース内部のテキスト微調整 */
+.news-inline {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+.news-inline dd {
+  line-height: 32px; /* 高さ32pxの中央に文字が来るように */
+  margin: 0;
+  font-size: 11px;
+  white-space: nowrap;
 }
 
 
