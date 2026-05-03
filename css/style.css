@@ -1059,28 +1059,39 @@ nav#globalnav .top-news-box::-webkit-scrollbar {
   margin-right: 8px;   /* 日付と本文の間のスキマ（お好みで調整） */
 }
 
-/* --- 配置設定 --- */
 
-/* デフォルト（PCサイズ未満）では非表示 */
+
+
+
+/* --- 配置設定：ボックスを右端へ、メニューをその左へ --- */
+
+/* デフォルト（スマホ等）では非表示 */
 nav#globalnav .top-news-box {
   display: none;
 }
 
-/* 768px以上のPC表示での配置（1500px制限を使い勝手の良い768pxに広げました） */
 @media only screen and (min-width: 768px) {
+  /* 親要素：ロゴ・メニュー・ボックスを横一列に */
   nav#globalnav .container {
     display: flex;
     align-items: center;
+    justify-content: space-between; /* 両端に広げる */
   }
 
+  /* メニューを右側に寄せる */
+  nav#globalnav ul#navmenu {
+    margin-left: auto; /* ロゴとメニューの間に空白を作る */
+    margin-right: 20px; /* 更新情報ボックスとの間の距離 */
+  }
+
+  /* 更新情報ボックスを一番右端に */
   nav#globalnav .top-news-box {
     display: block;
-    margin-left: auto; /* これでロゴ・メニューの右側に配置される */
+    flex-shrink: 0; /* ボックスが潰れないように固定 */
     width: 220px;
     height: 32px;
     padding: 0 12px;
     
-    /* 背景のぼかしデザイン */
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
@@ -1092,6 +1103,10 @@ nav#globalnav .top-news-box {
     z-index: 100;
   }
 }
+
+
+
+
 
 /* --- SNSアイコン設定（ここは変更なし） --- */
 .footer-sns {
