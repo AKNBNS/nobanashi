@@ -1013,24 +1013,24 @@ nav#globalnav ul li a {
 
 
 
-/* --- ナビゲーション全体のレイアウト修正 --- */
-
+/* --- ナビゲーション全体のレイアウト修正（PC版：768px以上） --- */
 @media only screen and (min-width: 768px) {
-  /* containerの幅制限を解除して画面いっぱいに広げる */
-  nav#globalnav > .container {
+  /* nav-flex: 画面の左右端まで領域を広げる */
+  nav#globalnav .nav-flex {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* 左詰めを基本にする */
-    max-width: 100% !important;  /* 画面端まで使えるように強制 */
-    padding: 0 40px;             /* 画面端にピッタリくっつきすぎないよう余白 */
+    justify-content: flex-start; /* 要素を左から順に並べる */
+    max-width: 100% !important;  /* containerの幅制限(960px等)を解除 */
+    width: 100%;
+    padding: 0 40px;             /* 画面端の余白（お好みで調整） */
   }
 
-  /* ロゴの設定 */
+  /* ロゴの右余白 */
   nav#globalnav h1.logo {
     margin-right: 30px; 
   }
 
-  /* メニューリスト：ここを auto にしないのがポイント */
+  /* メニューリストの設定 */
   nav#globalnav ul#navmenu {
     position: relative;
     display: flex;
@@ -1041,40 +1041,50 @@ nav#globalnav ul li a {
     box-shadow: none;
     width: auto;
     right: auto;
+    height: auto;
+    overflow: visible;
   }
 
-  /* ★ 更新情報ボックス：これを本当の右端へ飛ばす */
+  /* ★更新情報ボックス：これを本当の右端へ飛ばす */
   nav#globalnav .top-news-box {
     display: block;
     margin-left: auto; /* 左側に全余白を抱え込むことで右端へ移動 */
-    flex-shrink: 0;    /* ボックスが潰れないように固定 */
-    width: 250px;      /* 少し幅を広げると見やすいです */
+    flex-shrink: 0;    /* 画面が狭まってもボックスが潰れないようにする */
+    width: 250px;      
     height: 32px;
     padding: 0 15px;
-    
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 16px;
-    
     overflow-y: scroll;
-    scrollbar-width: none;
+    scrollbar-width: none; /* Firefox用 */
     z-index: 100;
   }
 }
 
-/* ニュース内部のテキスト微調整 */
+/* --- ニュースボックス内部の調整（共通） --- */
+nav#globalnav .top-news-box::-webkit-scrollbar {
+  display: none; /* Chrome, Safari用スクロールバー非表示 */
+}
+
 .news-inline {
   margin: 0;
   padding: 0;
-  display: block;
 }
+
 .news-inline dd {
   line-height: 32px; /* 高さ32pxの中央に文字が来るように */
   margin: 0;
   font-size: 11px;
   white-space: nowrap;
+  color: inherit;
+}
+
+.news-inline dd span {
+  font-weight: bold;
+  margin-right: 8px;
 }
 
 
