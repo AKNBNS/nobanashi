@@ -1028,7 +1028,7 @@ nav#globalnav ul li a {
 
 /* 更新情報を1行ボックスにしてスクロールさせる設定 */
 .news-list {
-  margin: 0;
+  margin: 0 0 40px;
   padding: 5px 10px;
   height: 2.4em;           /* 1行分＋αの高さに固定 */
   overflow-y: scroll;      /* 縦スクロールを表示 */
@@ -1060,4 +1060,15 @@ nav#globalnav ul li a {
     grid-template-columns: none;
     max-width: 100%;
   }
+}
+
+
+/* 更新情報エリアの区切り線の余白を狭くする */
+.footer-news hr {
+  margin: 10px 0; /* 上下の余白 */
+}
+
+/* ついでに「更新情報」見出しの上の余白もリセット */
+.footer-news h4#news {
+  margin-top: 5px; /* 線との間隔 */
 }
