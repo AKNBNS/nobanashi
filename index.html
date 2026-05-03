@@ -4,10 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>のばなし園</title>
+
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/lightbox.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
   <meta name="robots" content="noindex,noarchive,nofollow,noimageindex">
 </head>
 
@@ -15,19 +17,18 @@
 
 <nav id="globalnav" class="colorchange">
   <div class="globalnav_bg"></div>
-  
+
   <div class="container">
     <h1 class="logo"><a href="#">のばなし園</a></h1>
-    
+
     <p id="menubtn">&#9776;</p>
 
     <ul id="navmenu">
-      <li><a href="index.html#about">ご案内</a></li>
-      <li><a href="index.html#gallery">展示物</a></li>
-      <li><a href="index.html#contact">お問合せ先</a></li>
+      <li><a href="#about">ご案内</a></li>
+      <li><a href="#gallery">展示物</a></li>
+      <li><a href="#contact">お問合せ先</a></li>
     </ul>
 
-    <!-- 更新情報ボックス（1500px以上で右端に表示される設定） -->
     <div class="top-news-box">
       <dl class="news-inline">
         <dd><span>2026.06.20</span>ウェブサイト開設。</dd>
@@ -43,60 +44,74 @@
 </header>
 
 <main>
-  <section class="about-section">
-    <div class="container">
-      <h2 id="about">ご 案 内</h2>
-      <h4>このウェブサイトについて</h4>
-      <p>当サイトは個人による非公式のファンサイトです。<br>掲載されている画像・文章はすべて個人の趣味で作成されたものであり、公式作品および関係者様とは一切関係ありません。<br>
-         This is an unofficial fan site.<br> All images and text on this site are created as a personal hobby and are not affiliated with, endorsed by, or associated with the original creators or any official entities.</p>
-      <h4>禁止事項</h4>
-      <p>サイト内に掲載された画像・文章の無断転載・無断利用、及びAI学習使用を禁止します。<br>
-         Unauthorized reproduction, redistribution, or use of any content on this site, including use for AI training, is strictly prohibited.</p>
-    </div>
-  </section>
 
-  <section>
-    <div class="container">
-      <h2 id="gallery">展 示 物</h2>
-      <!-- イラスト（Lightbox用） -->
-      <ul class="illust">
-        <li><a href="img/01.jpg" data-lightbox="illust" data-title="作品タイトル"><img src="img/01-s.jpg"></a></li>
-      </ul>
-      <!-- 漫画（サムネ表示維持） -->
-      <ul class="illust">
-        <li><a href="/nobanashi/manga/sample/"><img src="img/s_manga_sample.jpg"></a></li>
-        <li><a href="/nobanashi/manga/michi/"><img src="img/s_manga_michi.jpg"></a></li>
-        <li><a href="/nobanashi/manga/benkyo/"><img src="img/s_manga_benkyo.jpg"></a></li>
-      </ul>
-    </div>
-  </section>
+<section class="about-section">
+  <div class="container">
+    <h2 id="about">ご 案 内</h2>
+
+    <h4>このウェブサイトについて</h4>
+    <p>
+      当サイトは個人による非公式のファンサイトです。<br>
+      掲載されている画像・文章はすべて個人の趣味で作成されたものであり、公式作品および関係者様とは一切関係ありません。
+    </p>
+
+    <h4>禁止事項</h4>
+    <p>
+      サイト内に掲載された画像・文章の無断転載・無断利用、及びAI学習使用を禁止します。
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2 id="gallery">展 示 物</h2>
+
+    <!-- イラスト -->
+    <ul class="illust">
+      <li>
+        <a href="img/01.jpg" data-lightbox="illust">
+          <img src="img/01-s.jpg">
+        </a>
+      </li>
+    </ul>
+
+    <!-- 漫画 -->
+    <ul class="manga">
+      <li><a href="/nobanashi/manga/sample/"><img src="img/s_manga_sample.jpg"></a></li>
+      <li><a href="/nobanashi/manga/michi/"><img src="img/s_manga_michi.jpg"></a></li>
+      <li><a href="/nobanashi/manga/benkyo/"><img src="img/s_manga_benkyo.jpg"></a></li>
+    </ul>
+
+  </div>
+</section>
+
 </main>
 
 <a href="#" id="totop"></a>
 
 <footer>
   <div class="container">
-    <div class="wrap-3col" style="display: flex; gap: 40px; flex-wrap: wrap;">
+    <div class="wrap-3col">
+
       <div class="inner">
         <h1 id="contact">のばなし園</h1>
-        <p class="memo">https://aknbns.github.io/nobanashi/<br>
-        管理者名 あこう</p>
-        <p class="memo">リンクフリー・etc...<br>
-        サイトについての情報を書いてもいい感じ</p>
+        <p class="memo">https://aknbns.github.io/nobanashi/<br>管理者名 あこう</p>
       </div>
+
       <div class="inner">
         <h4>SNS</h4>
         <div class="footer-sns">
-          <a href="https://x.com/AKOUverF" target="_blank" rel="noopener noreferrer"><img src="img/logo_twitter.png" alt="Twitter"></a>
-          <a href="https://bsky.app/profile/akou-ver-f.bsky.social" target="_blank" rel="noopener noreferrer"><img src="img/logo_bluesky.png" alt="Bluesky"></a>
-          <a href="https://www.pixiv.net/users/133677" target="_blank" rel="noopener noreferrer"><img src="img/logo_pixiv.png" alt="pixiv"></a>
+          <a href="https://x.com/AKOUverF" target="_blank"><img src="img/logo_twitter.png"></a>
+          <a href="https://bsky.app/" target="_blank"><img src="img/logo_bluesky.png"></a>
         </div>
       </div>
+
     </div>
   </div>
 </footer>
 
 <script src="js/lightbox.js"></script>
+
 <script>
 $(function() {
   $(window).on("scroll", function() {
@@ -106,10 +121,12 @@ $(function() {
       $("#globalnav").addClass("colorchange");
     }
   });
+
   $("#menubtn").on("click", function() {
     $("#navmenu").toggleClass("checked");
   });
 });
 </script>
+
 </body>
 </html>
