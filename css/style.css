@@ -612,7 +612,7 @@ ul.illust.only-one {
 }
 
 ul.illust.only-one li {
-  width: 50%;   /* 1点だけなので少し大きめに表示（お好みで40%〜60%に調整してください） */
+  width: 31%; 
   max-width: 400px; /* 大きくなりすぎないように制限 */
 }
 
