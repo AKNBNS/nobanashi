@@ -336,7 +336,7 @@ a:active {
 }
 
 a:hover {
-  color: #409c10;
+  color: #EB5A59;
 }
 
 ul ul {
@@ -347,7 +347,7 @@ ul ul {
 a.btn {
   display: block;
   background: #0000AE;
-  color: black;
+  color: #ffffff;
   padding: 10px 30px;
   text-align: center;
   min-width: 250px;
@@ -360,7 +360,7 @@ a.btn {
 }
 
 a.btn:hover {
-  background: #f1fc40;
+  background: #EB5A59;
 }
 
 p {
@@ -406,15 +406,16 @@ nav#globalnav .globalnav_bg {
   background: linear-gradient(0deg, rgba(230, 230, 230, 0) 5%, rgba(255, 255, 255, 0.9) 51%);
 }
 
+/* 通常タイトル */
 nav#globalnav h1 a {
-  color: #000000;
+  color: #0000AE;
   display: block;
   padding: 18px 15px;
   font-size: 40px;
 }
 
 nav#globalnav h1 a:hover {
-  color: #FFF63E;
+  color: #ffffff;
 }
 
 nav#globalnav p#menubtn {
@@ -431,15 +432,16 @@ nav#globalnav ul {
   flex-direction: column;
 }
 
+/* 通常メニュー文字（スマホ・共通） */
 nav#globalnav ul li a {
   display: block;
   text-decoration: none;
-  color: #000000;
+  color: #0000AE;
   padding: 8px 0;
 }
 
 nav#globalnav ul li a:hover {
-  color: #0000AE;
+  color: #ffffff;
 }
 
 nav#globalnav ul#navmenu {
@@ -476,6 +478,7 @@ nav#globalnav.colorchange .globalnav_bg {
   opacity: 0;
 }
 
+/* スクロール後タイトル */
 nav#globalnav.colorchange h1 a {
   color: #0000AE;
   -webkit-filter: drop-shadow(0px 0px 8px #ffffff) drop-shadow(0px 0px 6px #ffffff);
@@ -483,7 +486,7 @@ nav#globalnav.colorchange h1 a {
 }
 
 nav#globalnav.colorchange h1 a:hover {
-  color: #ffffff;
+  color: #EB5A59;
 }
 
 nav#globalnav.colorchange p#menubtn {
@@ -553,34 +556,29 @@ p#menubtn#inmenu-back {
 }
 
 /* ============================================================
-   イラストギャラリー設定（スマホ＆PC共通ベース）
+   イラストギャラリー設定
    ============================================================ */
 ul.illust {
   display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start; /* 左寄せ */
+  justify-content: flex-start;
   margin: 30px auto;
   list-style: none;
-  gap: 15px 3%; /* 【新機能】縦の隙間を15px、横の隙間を3%に固定 */
+  gap: 15px 3%;
 }
 
 ul.illust li {
   position: relative;
   display: block;
   height: auto;
-  width: 31%;           /* 横幅を少し狭くして隙間を作る */
-  margin-bottom: 0;     /* gapで調整するので0でOK */
+  width: 31%;           
+  margin-bottom: 0;      
   padding: 0;
 }
 
 ul.illust li:before {
   display: none;
-}
-
-/* 個別のmargin設定はgapに任せるので不要になりますが、念のため上書き */
-ul.illust li:not(:nth-of-type(3n)) {
-  margin-right: 0;
 }
 
 ul.illust li a {
@@ -601,23 +599,17 @@ ul.illust li a img {
 }
 
 ul.illust li a:hover img {
-  filter: brightness(120%);            /* 1.2倍明るくする */
-  opacity: 1;                          /* 透明度は下げずに明るさだけで表現 */
+  filter: brightness(120%); 
 }
 
-
-
-/* イラストが1点のみの場合の設定 */
 ul.illust.only-one {
-  justify-content: center; /* 中央に寄せる */
+  justify-content: center;
 }
 
 ul.illust.only-one li {
   width: 31%; 
-  max-width: 400px; /* 大きくなりすぎないように制限 */
+  max-width: 400px;
 }
-
-
 
 /* ============================================================
    プロフィール・その他
@@ -669,21 +661,19 @@ ul.sns li a {
 
 footer {
     background-image: url("../img/footer.jpg"); 
-    background-size: cover;                    /* エリア全体*/
-    background-position: right top;           /* 左右中央、上を表示 */
-    background-repeat: no-repeat;              /* 繰り返さない */
-    color: #fff;                               /* 文字色後ほど調整 */
-    padding: 30px 0 30px;                      
+    background-size: cover; 
+    background-position: right top; 
+    background-repeat: no-repeat; 
+    color: #fff; 
+    padding: 30px 0 30px; 
 }
 
-/* 画面幅650px以下の場合 */
 @media screen and (max-width: 650px) {
     footer {
         background-image: url("../img/footer2.jpg"); 
         background-position: right top;
     }
 }
-
 
 footer p.memo {
   margin: 0 auto 10px;
@@ -701,7 +691,7 @@ footer ul.menu li a {
 }
 
 footer ul.menu li a:hover {
-  color: #f1fc40;
+  color: #EB5A59;
 }
 
 footer ul.menu ul {
@@ -715,7 +705,7 @@ footer p#copyright {
 }
 
 footer p#copyright a:hover {
-  color: #f1fc40;
+  color: #EB5A59;
 }
 
 form.mailform {
@@ -769,12 +759,13 @@ form.mailform input[type="submit"] {
   margin: 20px auto 20px;
   padding: 15px 20px;
   background: #0000AE;
+  color: #ffffff;
   border: none;
 }
 
 form.mailform input[type="submit"]:focus,
 form.mailform input[type="submit"]:hover {
-  background: #f1fc40;
+  background: #EB5A59;
   cursor: pointer;
 }
 
@@ -794,8 +785,8 @@ a#totop:before {
   display: block;
   width: 10px;
   height: 10px;
-  border-top: 2px solid black;
-  border-right: 2px solid black;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   margin: auto;
@@ -904,18 +895,6 @@ a#totop:hover:before {
     justify-content: space-between;
   }
 
-  nav#globalnav ul {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-direction: column;
-  }
-
-  nav#globalnav ul li a {
-    text-decoration: none;
-  }
-
   nav#globalnav ul#navmenu {
     position: relative;
     background: transparent;
@@ -937,7 +916,7 @@ a#totop:hover:before {
 
   nav#globalnav ul#navmenu ul {
     list-style: none;
-    background: #000000;
+    background: #0000AE;
     opacity: 0;
     -webkit-transform: translateY(-5px);
     transform: translateY(-5px);
@@ -953,7 +932,6 @@ a#totop:hover:before {
 
   nav#globalnav ul#navmenu ul li a {
     padding: 10px 20px;
-    text-align: left;
     color: #ffffff;
     height: 0;
     text-align: center;
@@ -966,8 +944,6 @@ a#totop:hover:before {
     z-index: 10;
     -webkit-transform: translateX(0);
     transform: translateX(0);
-    -webkit-transition: all .3s;
-    transition: all .3s;
     height: auto;
     pointer-events: all;
   }
@@ -976,21 +952,22 @@ a#totop:hover:before {
     height: auto;
   }
 
+  /* PC版メニュー通常時 */
   nav#globalnav ul#navmenu li a {
     display: block;
     font-weight: bold;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
     width: fit-content;
     padding: 20px 15px;
     margin: auto;
     font-size: 20px;
-  }
-
-  nav#globalnav ul#navmenu li a:hover {
     color: #0000AE;
   }
 
+  nav#globalnav ul#navmenu li a:hover {
+    color: #ffffff;
+  }
+
+  /* PC版メニュー：スクロール後 */
   nav#globalnav.colorchange ul#navmenu li a {
     color: #0000AE;
     -webkit-filter: drop-shadow(0px 0px 8px #ffffff) drop-shadow(0px 0px 6px #ffffff);
@@ -998,23 +975,15 @@ a#totop:hover:before {
   }
 
   nav#globalnav.colorchange ul#navmenu li a:hover {
-    color: #ffffff;
+    color: #EB5A59;
   }
 
-/* イラストPC設定 */
   ul.illust {
-    gap: 20px 2.5%;      /* 横の隙間を少し広めに確保 */
+    gap: 20px 2.5%; 
   }
 
   ul.illust li {
-    width: 31.6%;        /* 31.6% * 3 + 2.5% * 2 = 99.8% (ほぼ100%) */
-    margin-bottom: 0;
-    display: block;
-  }
-
-  /* 古いマージン設定を完全に打ち消す */
-  ul.illust li:not(:nth-of-type(3n)),
-  ul.illust li:nth-of-type(3n) {
+    width: 31.6%; 
     margin-right: 0 !important;
   }
 
@@ -1043,14 +1012,9 @@ a#totop:hover:before {
   }
 }
 
-
-
-
 /* ============================================================
    追加の調整
    ============================================================ */
-
-/* ABOUTセクション中央寄せ */
 .about-section .container {
   text-align: center;
   display: flex;
@@ -1064,13 +1028,11 @@ a#totop:hover:before {
   width: 100%;
 }
 
-/* ナビゲーションフォント */
 nav#globalnav ul#navmenu li a,
 nav#globalnav ul li a {
   font-family: "Kiwi Maru", "Zen Maru Gothic", "Zen Kurenaido", serif;
 }
 
-/* SNSアイコン */
 .footer-sns {
   display: flex;
   gap: 18px;
@@ -1089,7 +1051,6 @@ nav#globalnav ul li a {
   opacity: 0.7;
 }
 
-/* 更新情報スクロール */
 .news-list {
   margin: 0 0 40px;
   padding: 5px 10px;
@@ -1130,38 +1091,32 @@ nav#globalnav ul li a {
   margin-top: 5px;
 }
 
-
-/* GALLERYセクションの設定 */
 .gallery-section {
-  padding-bottom: 250px !important; /* 下の余白 */
+  padding-bottom: 250px !important; 
 }
 
 .gallery-section .container {
   text-align: center;
 }
 
-/* ギャラリー内のh4と説明文pだけ中央、画像リスト(ul)は左寄せを維持 */
 .gallery-section h4,
 .gallery-section p {
   text-align: center;
   width: 100%;
 }
 
-/* 漫画タイトルのspanも中央寄せを維持 */
 .gallery-section .illust-title {
   text-align: center;
 }
 
-
-/* サムネの上の文字 */
 .illust-title {
-  display: block;        /* 文字を1行独立させる */
-  text-align: center;    /* 文字を中央に寄せる */
-  font-size: 14px;       /* 文字の大きさ */
-  margin-bottom: 5px;    /* 画像との間の隙間 */
-  font-weight: bold;     /* 太字（お好みで） */
-  color: #333;           /* 文字の色 */
-  white-space: nowrap;   /* 長い時に改行させない */
-  overflow: hidden;      /* はみ出た文字を隠す */
-  text-overflow: ellipsis; /* はみ出たら「...」にする */
+  display: block; 
+  text-align: center; 
+  font-size: 14px; 
+  margin-bottom: 5px; 
+  font-weight: bold; 
+  color: #333; 
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
 }
