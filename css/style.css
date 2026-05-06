@@ -139,7 +139,7 @@ ul.list li:before {
   display: block;
   width: 8px;
   height: 8px;
-  background: #9ed200;
+  background: #0000AE;
   position: absolute;
   margin: auto;
   top: 9px;
@@ -167,7 +167,7 @@ ol.list li:before {
   margin: auto;
   top: 6px;
   left: -25px;
-  background: #9ed200;
+  background: #0000AE;
   width: 18px;
   height: 18px;
   border-radius: 2px;
@@ -187,7 +187,7 @@ dl.list dt:before {
   display: block;
   width: 8px;
   height: 8px;
-  background: #9ed200;
+  background: #0000AE;
   position: absolute;
   margin: auto;
   top: 9px;
@@ -253,7 +253,7 @@ h2 {
 
 h3 {
   font-family: "Kiwi Maru", "Zen Maru Gothic", "Zen Kurenaido", serif;
-  border-left: 3px solid #9ed200;
+  border-left: 3px solid #0000AE;
   padding: 0px 15px;
   margin: 2em 0 1em;
 }
@@ -323,7 +323,7 @@ table.center {
 }
 
 a {
-  color: #9ed200;
+  color: #0000AE;
   text-decoration: none;
   -webkit-transition: color .3s;
   transition: color .3s;
@@ -332,7 +332,7 @@ a {
 a:focus,
 a:visited,
 a:active {
-  color: #9ed200;
+  color: #0000AE;
 }
 
 a:hover {
@@ -346,7 +346,7 @@ ul ul {
 
 a.btn {
   display: block;
-  background: #9ed200;
+  background: #0000AE;
   color: black;
   padding: 10px 30px;
   text-align: center;
@@ -414,7 +414,7 @@ nav#globalnav h1 a {
 }
 
 nav#globalnav h1 a:hover {
-  color: #ffffff;
+  color: #FFF63E;
 }
 
 nav#globalnav p#menubtn {
@@ -439,7 +439,7 @@ nav#globalnav ul li a {
 }
 
 nav#globalnav ul li a:hover {
-  color: #9ed200;
+  color: #0000AE;
 }
 
 nav#globalnav ul#navmenu {
@@ -483,7 +483,7 @@ nav#globalnav.colorchange h1 a {
 }
 
 nav#globalnav.colorchange h1 a:hover {
-  color: #9ed200;
+  color: #ffffff;
 }
 
 nav#globalnav.colorchange p#menubtn {
@@ -768,7 +768,7 @@ form.mailform input[type="submit"] {
   max-width: 200px;
   margin: 20px auto 20px;
   padding: 15px 20px;
-  background: #9ed200;
+  background: #0000AE;
   border: none;
 }
 
@@ -786,7 +786,7 @@ a#totop {
   right: 0;
   width: 60px;
   height: 60px;
-  background: #9ed200;
+  background: #0000AE;
 }
 
 a#totop:before {
@@ -988,7 +988,7 @@ a#totop:hover:before {
   }
 
   nav#globalnav ul#navmenu li a:hover {
-    color: #9ed200;
+    color: #0000AE;
   }
 
   nav#globalnav.colorchange ul#navmenu li a {
@@ -998,7 +998,7 @@ a#totop:hover:before {
   }
 
   nav#globalnav.colorchange ul#navmenu li a:hover {
-    color: #9ed200;
+    color: #ffffff;
   }
 
 /* イラストPC設定 */
