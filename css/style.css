@@ -139,7 +139,7 @@ ul.list li:before {
   display: block;
   width: 8px;
   height: 8px;
-  background: #0000AE;
+  background: #06067A;
   position: absolute;
   margin: auto;
   top: 9px;
@@ -167,7 +167,7 @@ ol.list li:before {
   margin: auto;
   top: 6px;
   left: -25px;
-  background: #0000AE;
+  background: #06067A;
   width: 18px;
   height: 18px;
   border-radius: 2px;
@@ -187,7 +187,7 @@ dl.list dt:before {
   display: block;
   width: 8px;
   height: 8px;
-  background: #0000AE;
+  background: #06067A;
   position: absolute;
   margin: auto;
   top: 9px;
@@ -253,7 +253,7 @@ h2 {
 
 h3 {
   font-family: "Kiwi Maru", "Zen Maru Gothic", "Zen Kurenaido", serif;
-  border-left: 3px solid #0000AE;
+  border-left: 3px solid #06067A;
   padding: 0px 15px;
   margin: 2em 0 1em;
 }
@@ -323,7 +323,7 @@ table.center {
 }
 
 a {
-  color: #0000AE;
+  color: #06067A;
   text-decoration: none;
   -webkit-transition: color .3s;
   transition: color .3s;
@@ -332,7 +332,7 @@ a {
 a:focus,
 a:visited,
 a:active {
-  color: #0000AE;
+  color: #06067A;
 }
 
 a:hover {
@@ -346,7 +346,7 @@ ul ul {
 
 a.btn {
   display: block;
-  background: #0000AE;
+  background: #06067A;
   color: #ffffff;
   padding: 10px 30px;
   text-align: center;
@@ -408,7 +408,7 @@ nav#globalnav .globalnav_bg {
 
 /* 通常タイトル */
 nav#globalnav h1 a {
-  color: #0000AE;
+  color: #06067A;
   display: block;
   padding: 18px 15px;
   font-size: 40px;
@@ -436,7 +436,7 @@ nav#globalnav ul {
 nav#globalnav ul li a {
   display: block;
   text-decoration: none;
-  color: #0000AE;
+  color: #06067A;
   padding: 8px 0;
 }
 
@@ -480,7 +480,7 @@ nav#globalnav.colorchange .globalnav_bg {
 
 /* スクロール後タイトル */
 nav#globalnav.colorchange h1 a {
-  color: #0000AE;
+  color: #06067A;
   -webkit-filter: drop-shadow(0px 0px 8px #ffffff) drop-shadow(0px 0px 6px #ffffff);
   filter: drop-shadow(0px 0px 8px #ffffff) drop-shadow(0px 0px 6px #ffffff);
 }
@@ -490,7 +490,7 @@ nav#globalnav.colorchange h1 a:hover {
 }
 
 nav#globalnav.colorchange p#menubtn {
-  color: #0000AE;
+  color: #06067A;
   filter: drop-shadow(0px 0px 8px #ffffff) drop-shadow(0px 0px 6px #ffffff); 
 }
 
@@ -758,7 +758,7 @@ form.mailform input[type="submit"] {
   max-width: 200px;
   margin: 20px auto 20px;
   padding: 15px 20px;
-  background: #0000AE;
+  background: #06067A;
   color: #ffffff;
   border: none;
 }
@@ -777,7 +777,7 @@ a#totop {
   right: 0;
   width: 60px;
   height: 60px;
-  background: #0000AE;
+  background: #06067A;
 }
 
 a#totop:before {
@@ -916,7 +916,7 @@ a#totop:hover:before {
 
   nav#globalnav ul#navmenu ul {
     list-style: none;
-    background: #0000AE;
+    background: #06067A;
     opacity: 0;
     -webkit-transform: translateY(-5px);
     transform: translateY(-5px);
@@ -960,7 +960,7 @@ a#totop:hover:before {
     padding: 20px 15px;
     margin: auto;
     font-size: 20px;
-    color: #0000AE;
+    color: #06067A;
   }
 
   nav#globalnav ul#navmenu li a:hover {
@@ -969,7 +969,7 @@ a#totop:hover:before {
 
   /* PC版メニュー：スクロール後 */
   nav#globalnav.colorchange ul#navmenu li a {
-    color: #0000AE;
+    color: #06067A;
     -webkit-filter: drop-shadow(0px 0px 8px #ffffff) drop-shadow(0px 0px 6px #ffffff);
     filter: drop-shadow(0px 0px 8px #ffffff) drop-shadow(0px 0px 6px #ffffff);
   }
