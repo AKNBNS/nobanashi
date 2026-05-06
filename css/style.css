@@ -710,7 +710,7 @@ footer p#copyright a:hover {
 }
 
 footer .container {
-    background: rgba(255, 255, 255, 0.7); /* 半透明の白 */
+    background: rgba(255, 255, 255, 0.4); /* 半透明の白 */
     padding: 20px; /* 内側に余白を作る */
     border-radius: 8px; /* 角を少し丸くすると柔らかい印象に */
 }
