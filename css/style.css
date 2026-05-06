@@ -104,7 +104,7 @@ p {
 body {
   background: #ffffff;
   overflow-x: hidden;
-  color: #242424;
+  color: #06067A;
   margin: 0;
   padding: 0;
   font-size: 16px;
@@ -419,7 +419,7 @@ nav#globalnav h1 a:hover {
 }
 
 nav#globalnav p#menubtn {
-  color: #000000;
+  color: #06067A;
   margin: 0;
   cursor: pointer;
 }
@@ -495,7 +495,7 @@ nav#globalnav.colorchange p#menubtn {
 }
 
 header {
-  background-color: #000000;
+  background-color: #06067A;
   height: 500px;
 }
 
@@ -530,7 +530,7 @@ p#menubtn {
   text-align: center;
   font-size: 30px;
   position: fixed;
-  color: #000000;
+  color: #06067A;
   top: 10px;
   right: 20px;
   -webkit-transition: color 0.4s;
