@@ -415,7 +415,7 @@ nav#globalnav h1 a {
 }
 
 nav#globalnav h1 a:hover {
-  color: #ffffff;
+  color: #EB5A59;
 }
 
 nav#globalnav p#menubtn {
@@ -441,7 +441,7 @@ nav#globalnav ul li a {
 }
 
 nav#globalnav ul li a:hover {
-  color: #ffffff;
+  color: #EB5A59;
 }
 
 nav#globalnav ul#navmenu {
@@ -964,7 +964,7 @@ a#totop:hover:before {
   }
 
   nav#globalnav ul#navmenu li a:hover {
-    color: #ffffff;
+    color: #EB5A59;
   }
 
   /* PC版メニュー：スクロール後 */
