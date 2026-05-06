@@ -42,7 +42,6 @@ img,
 p {
   margin: 0;
   padding: 0;
-  color: #0E0E54; /* 文字色統一 */
 }
 
 hr {
@@ -105,7 +104,7 @@ p {
 body {
   background: #ffffff;
   overflow-x: hidden;
-  color: #0E0E54; /* 文字色統一 */
+  color: #242424;
   margin: 0;
   padding: 0;
   font-size: 16px;
@@ -133,7 +132,6 @@ ul.list li {
   position: relative;
   margin-left: 25px;
   margin-bottom: 5px;
-  color: #0E0E54;
 }
 
 ul.list li:before {
@@ -141,7 +139,7 @@ ul.list li:before {
   display: block;
   width: 8px;
   height: 8px;
-  background: #06067A;
+  background: #0000AE;
   position: absolute;
   margin: auto;
   top: 9px;
@@ -159,7 +157,6 @@ ol.list li {
   position: relative;
   margin-left: 25px;
   margin-bottom: 5px;
-  color: #0E0E54;
 }
 
 ol.list li:before {
@@ -170,8 +167,7 @@ ol.list li:before {
   margin: auto;
   top: 6px;
   left: -25px;
-  background: #06067A;
-  color: #ffffff;
+  background: #0000AE;
   width: 18px;
   height: 18px;
   border-radius: 2px;
@@ -184,7 +180,6 @@ dl.list dt {
   margin-left: 25px;
   font-weight: bold;
   font-size: 110%;
-  color: #0E0E54;
 }
 
 dl.list dt:before {
@@ -192,7 +187,7 @@ dl.list dt:before {
   display: block;
   width: 8px;
   height: 8px;
-  background: #06067A;
+  background: #0000AE;
   position: absolute;
   margin: auto;
   top: 9px;
@@ -201,7 +196,6 @@ dl.list dt:before {
 
 dl.list dd {
   margin: 10px 0 1em 1em;
-  color: #0E0E54;
 }
 
 dl.list dd>*:first-of-type {
@@ -248,26 +242,29 @@ strong.marker {
   margin-bottom: 30px;
 }
 
-h1, h2, h3, h4, h5 {
+h1 {
   font-family: "Kiwi Maru", "Zen Maru Gothic", "Zen Kurenaido", serif;
-  color: #0E0E54;
 }
 
 h2 {
+  font-family: "Kiwi Maru", "Zen Maru Gothic", "Zen Kurenaido", serif;
   text-align: center;
 }
 
 h3 {
-  border-left: 3px solid #06067A;
+  font-family: "Kiwi Maru", "Zen Maru Gothic", "Zen Kurenaido", serif;
+  border-left: 3px solid #0000AE;
   padding: 0px 15px;
   margin: 2em 0 1em;
 }
 
 h4 {
+  font-family: "Kiwi Maru", "Zen Maru Gothic", "Zen Kurenaido", serif;
   margin: 2em 0 0em;
 }
 
 h5 {
+  font-family: "Kiwi Maru", "Zen Maru Gothic", "Zen Kurenaido", serif;
   font-size: 18px;
   margin: 10px auto 5px;
 }
@@ -281,7 +278,6 @@ blockquote {
   margin: 2em 0;
   padding: 15px;
   border-left: 3px solid #ada5a5;
-  color: #0E0E54;
 }
 
 blockquote>*:first-of-type {
@@ -297,7 +293,6 @@ td,
 th {
   border: 1px solid #dcdcdc;
   border-collapse: collapse;
-  color: #0E0E54;
 }
 
 td,
@@ -317,7 +312,6 @@ table.center {
   background: #f1fc40;
   margin: 2em 0;
   padding: 15px;
-  color: #0E0E54;
 }
 
 .box>*:first-of-type {
@@ -329,7 +323,7 @@ table.center {
 }
 
 a {
-  color: #06067A;
+  color: #0000AE;
   text-decoration: none;
   -webkit-transition: color .3s;
   transition: color .3s;
@@ -338,7 +332,7 @@ a {
 a:focus,
 a:visited,
 a:active {
-  color: #06067A;
+  color: #0000AE;
 }
 
 a:hover {
@@ -352,7 +346,7 @@ ul ul {
 
 a.btn {
   display: block;
-  background: #06067A;
+  background: #0000AE;
   color: #ffffff;
   padding: 10px 30px;
   text-align: center;
@@ -367,7 +361,6 @@ a.btn {
 
 a.btn:hover {
   background: #EB5A59;
-  color: #ffffff;
 }
 
 p {
@@ -388,13 +381,11 @@ dl.news dt {
   font-weight: bold;
   padding: 0;
   line-height: 1.2;
-  color: #0E0E54;
 }
 
 dl.news dd {
   padding: 5px 0 10px 0;
   margin: 0;
-  color: #0E0E54;
 }
 
 nav#globalnav {
@@ -411,23 +402,24 @@ nav#globalnav .globalnav_bg {
   top: 0;
   z-index: -1;
   opacity: 1;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(5%, rgba(230, 230, 230, 0)), color-stop(51%, rgba(255, 255, 255, 0.9)));
   background: linear-gradient(0deg, rgba(230, 230, 230, 0) 5%, rgba(255, 255, 255, 0.9) 51%);
 }
 
-/* ナビロゴ */
+/* 通常タイトル */
 nav#globalnav h1 a {
-  color: #06067A;
+  color: #0000AE;
   display: block;
   padding: 18px 15px;
   font-size: 40px;
 }
 
 nav#globalnav h1 a:hover {
-  color: #EB5A59;
+  color: #ffffff;
 }
 
 nav#globalnav p#menubtn {
-  color: #0E0E54;
+  color: #000000;
   margin: 0;
   cursor: pointer;
 }
@@ -440,16 +432,16 @@ nav#globalnav ul {
   flex-direction: column;
 }
 
-/* ナビメニューリンク */
+/* 通常メニュー文字（スマホ・共通） */
 nav#globalnav ul li a {
   display: block;
   text-decoration: none;
-  color: #06067A;
+  color: #0000AE;
   padding: 8px 0;
 }
 
 nav#globalnav ul li a:hover {
-  color: #EB5A59;
+  color: #ffffff;
 }
 
 nav#globalnav ul#navmenu {
@@ -474,12 +466,21 @@ nav#globalnav ul#navmenu.checked {
   right: 0;
 }
 
+nav#globalnav ul#navmenu ul {
+  list-style: none;
+}
+
 nav#globalnav.colorchange {
   background: transparent;
 }
 
+nav#globalnav.colorchange .globalnav_bg {
+  opacity: 0;
+}
+
+/* スクロール後タイトル */
 nav#globalnav.colorchange h1 a {
-  color: #06067A;
+  color: #0000AE;
   -webkit-filter: drop-shadow(0px 0px 8px #ffffff) drop-shadow(0px 0px 6px #ffffff);
   filter: drop-shadow(0px 0px 8px #ffffff) drop-shadow(0px 0px 6px #ffffff);
 }
@@ -489,7 +490,7 @@ nav#globalnav.colorchange h1 a:hover {
 }
 
 nav#globalnav.colorchange p#menubtn {
-  color: #06067A;
+  color: #0000AE;
   filter: drop-shadow(0px 0px 8px #ffffff) drop-shadow(0px 0px 6px #ffffff); 
 }
 
@@ -529,7 +530,7 @@ p#menubtn {
   text-align: center;
   font-size: 30px;
   position: fixed;
-  color: #0E0E54;
+  color: #000000;
   top: 10px;
   right: 20px;
   -webkit-transition: color 0.4s;
@@ -537,8 +538,25 @@ p#menubtn {
   z-index: 9;
 }
 
+p#menubtn:hover {
+  cursor: pointer;
+}
+
+p#menubtn#inmenu {
+  color: #ffffff;
+}
+
+p#menubtn#inmenu-back {
+  opacity: 0;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
 /* ============================================================
-   イラストギャラリー
+   イラストギャラリー設定
    ============================================================ */
 ul.illust {
   display: -webkit-box;
@@ -552,13 +570,29 @@ ul.illust {
 
 ul.illust li {
   position: relative;
+  display: block;
+  height: auto;
   width: 31%;           
+  margin-bottom: 0;      
   padding: 0;
+}
+
+ul.illust li:before {
+  display: none;
+}
+
+ul.illust li a {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 ul.illust li a img {
   display: block;
   width: 100%;
+  height: auto;
+  object-fit: contain;
+  border: none;
   border-radius: 6px;
   transition: transform 0.2s, filter 0.2s; 
   filter: brightness(100%); 
@@ -568,15 +602,35 @@ ul.illust li a:hover img {
   filter: brightness(120%); 
 }
 
+ul.illust.only-one {
+  justify-content: center;
+}
+
+ul.illust.only-one li {
+  width: 31%; 
+  max-width: 400px;
+}
+
 /* ============================================================
-   プロフィール
+   プロフィール・その他
    ============================================================ */
+.card-wrapper {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+}
+
+.card-wrapper .card {
+  text-align: center;
+}
+
 .card-wrapper .card p {
   font-size: 15px;
   max-width: 300px;
   margin: auto;
   text-align: left;
-  color: #0E0E54;
 }
 
 .card-wrapper img.prof {
@@ -588,32 +642,36 @@ ul.illust li a:hover img {
   margin: 20px auto 10px;
 }
 
+ul.sns {
+  list-style: none;
+  display: -webkit-box;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 20px auto;
+}
+
 ul.sns li a {
   display: block;
   font-size: 20px;
   padding: 5px;
-  color: #06067A;
+  margin: 0 3px;
 }
 
-/* ============================================================
-   フッター（文字色を 0E0E54 に統一）
-   ============================================================ */
 footer {
     background-image: url("../img/footer.jpg"); 
     background-size: cover; 
     background-position: right top; 
     background-repeat: no-repeat; 
-    color: #0E0E54; /* 白から変更 */
+    color: #fff; 
     padding: 30px 0 30px; 
-}
-
-footer p, footer a, footer li, footer div {
-    color: #0E0E54 !important; /* 強制的に統一 */
 }
 
 @media screen and (max-width: 650px) {
     footer {
         background-image: url("../img/footer2.jpg"); 
+        background-position: right top;
     }
 }
 
@@ -622,8 +680,22 @@ footer p.memo {
   font-size: 13px;
 }
 
+footer ul.menu {
+  list-style: none;
+}
+
+footer ul.menu li a {
+  font-size: 14px;
+  display: block;
+  padding: 5px 0;
+}
+
 footer ul.menu li a:hover {
-  color: #EB5A59 !important;
+  color: #EB5A59;
+}
+
+footer ul.menu ul {
+  list-style: none;
 }
 
 footer p#copyright {
@@ -632,23 +704,66 @@ footer p#copyright {
   opacity: .8;
 }
 
-/* ============================================================
-   メールフォーム
-   ============================================================ */
-form.mailform textarea, 
-form.mailform input {
-  color: #0E0E54;
-  font-family: "Kiwi Maru", "Zen Maru Gothic", "Zen Kurenaido", serif;
-  background: #fcfcfc;
+footer p#copyright a:hover {
+  color: #EB5A59;
+}
+
+form.mailform {
+  text-align: center;
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+form.mailform textarea {
+  margin: 0 0 15px;
+  font-size: 14px;
+  line-height: 1.6em;
+  padding: 10px;
+  width: 100%;
+  height: 200px;
+  border-radius: 5px;
+  vertical-align: bottom;
   border: 1px solid #e5e4e4;
+  background: #fcfcfc;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-family: "Kiwi Maru", "Zen Maru Gothic", "Zen Kurenaido", serif;
+}
+
+form.mailform textarea:focus {
+  outline: none;
+  background: #ffffff;
+}
+
+form.mailform input {
+  margin: 0 0 15px;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #e5e4e4;
+  background: #fcfcfc;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+  font-family: "Kiwi Maru", "Zen Maru Gothic", "Zen Kurenaido", serif;
+}
+
+form.mailform input:focus {
+  outline: none;
+  background: #ffffff;
 }
 
 form.mailform input[type="submit"] {
-  background: #06067A;
-  color: #ffffff !important;
+  width: 100%;
+  max-width: 200px;
+  margin: 20px auto 20px;
+  padding: 15px 20px;
+  background: #0000AE;
+  color: #ffffff;
   border: none;
 }
 
+form.mailform input[type="submit"]:focus,
 form.mailform input[type="submit"]:hover {
   background: #EB5A59;
   cursor: pointer;
@@ -662,7 +777,7 @@ a#totop {
   right: 0;
   width: 60px;
   height: 60px;
-  background: #06067A;
+  background: #0000AE;
 }
 
 a#totop:before {
@@ -670,50 +785,191 @@ a#totop:before {
   display: block;
   width: 10px;
   height: 10px;
-  border-top: 2px solid #ffffff;
-  border-right: 2px solid #ffffff;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   margin: auto;
   position: absolute;
-  right: 0; left: 0; top: 0; bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+a#totop:hover:before {
+  -webkit-transform: translateY(-3px) rotate(-45deg);
+  transform: translateY(-3px) rotate(-45deg);
 }
 
 /* ============================================================
-   PC版レスポンシブ
+   PC版レスポンシブ（768px以上）
    ============================================================ */
 @media only screen and (min-width: 768px) {
+  .wrap {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+  }
+
+  .wrap .inner {
+    width: 46%;
+    -webkit-box-flex: 0;
+    flex: none;
+  }
+
+  .wrap-3col {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+  }
+
+  .wrap-3col .inner {
+    width: 31%;
+    -webkit-box-flex: 0;
+    flex: none;
+  }
+
+  section {
+    padding: 80px 0;
+  }
+
+  h2 {
+    font-size: 35px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  dl.news {
+    max-width: 700px;
+    margin: auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+  }
+
+  dl.news dd,
+  dl.news dt {
+    padding: 10px;
+    line-height: 1.6;
+  }
+
+  p#menubtn {
+    display: none;
+  }
+
+  header img.top-pc {
+    display: block;
+  }
+
+  header img.top-phone {
+    display: none;
+  }
+
+  nav#globalnav {
+    position: fixed;
+    top: 0;
+    z-index: 9;
+  }
+
   nav#globalnav h1 a {
     font-size: 35px;
-    color: #06067A;
+  }
+
+  nav#globalnav>.container {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
   }
 
   nav#globalnav ul#navmenu {
     position: relative;
     background: transparent;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
+    max-width: 80%;
     height: auto;
     right: auto;
     padding: 0;
+    overflow: visible;
     box-shadow: none;
+    -webkit-transition: none;
+    transition: none;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     flex-direction: row;
   }
 
-  /* PCメニュー通常時リンク */
+  nav#globalnav ul#navmenu ul {
+    list-style: none;
+    background: #0000AE;
+    opacity: 0;
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+    -webkit-transform-origin: top center;
+    transform-origin: top center;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    height: 0;
+    top: calc(100% - 13px);
+    position: absolute;
+    pointer-events: none;
+  }
+
+  nav#globalnav ul#navmenu ul li a {
+    padding: 10px 20px;
+    color: #ffffff;
+    height: 0;
+    text-align: center;
+    margin: 0;
+    font-size: 16px;
+  }
+
+  nav#globalnav ul#navmenu li:hover ul {
+    opacity: 1;
+    z-index: 10;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    height: auto;
+    pointer-events: all;
+  }
+
+  nav#globalnav ul#navmenu li:hover ul li a {
+    height: auto;
+  }
+
+  /* PC版メニュー通常時 */
   nav#globalnav ul#navmenu li a {
+    display: block;
     font-weight: bold;
+    width: fit-content;
     padding: 20px 15px;
+    margin: auto;
     font-size: 20px;
-    color: #06067A;
+    color: #0000AE;
   }
 
   nav#globalnav ul#navmenu li a:hover {
-    color: #EB5A59;
+    color: #ffffff;
   }
 
-  /* スクロール後：影をつけて読みやすく */
+  /* PC版メニュー：スクロール後 */
   nav#globalnav.colorchange ul#navmenu li a {
-    color: #06067A;
+    color: #0000AE;
     -webkit-filter: drop-shadow(0px 0px 8px #ffffff) drop-shadow(0px 0px 6px #ffffff);
     filter: drop-shadow(0px 0px 8px #ffffff) drop-shadow(0px 0px 6px #ffffff);
   }
@@ -722,24 +978,145 @@ a#totop:before {
     color: #EB5A59;
   }
 
-  /* サブメニュー */
-  nav#globalnav ul#navmenu ul {
-    background: #06067A;
+  ul.illust {
+    gap: 20px 2.5%; 
   }
-  
-  nav#globalnav ul#navmenu ul li a {
-    color: #ffffff;
+
+  ul.illust li {
+    width: 31.6%; 
+    margin-right: 0 !important;
+  }
+
+  .card-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+  }
+
+  .card-wrapper .card {
+    width: 43%;
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (min-width: 1030px) {
+  footer p.copyright {
+    text-align: right;
+  }
+
+  .card-wrapper .card {
+    width: 31%;
   }
 }
 
 /* ============================================================
-   共通パーツ
+   追加の調整
    ============================================================ */
+.about-section .container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-section p,
+.about-section h4 {
+  text-align: center;
+  width: 100%;
+}
+
+nav#globalnav ul#navmenu li a,
+nav#globalnav ul li a {
+  font-family: "Kiwi Maru", "Zen Maru Gothic", "Zen Kurenaido", serif;
+}
+
+.footer-sns {
+  display: flex;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.footer-sns img {
+  width: 28px;
+  height: auto;
+  object-fit: contain;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.footer-sns img:hover {
+  opacity: 0.7;
+}
+
+.news-list {
+  margin: 0 0 40px;
+  padding: 5px 10px;
+  height: 2.4em;
+  overflow-y: scroll;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.news-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.news-list::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border-radius: 5px;
+}
+
 .news-list dt {
-  color: #0E0E54;
+  font-size: 13px;
+  color: #ffffff;
+  margin: 0;
+  line-height: 2.4em;
+}
+
+@media only screen and (min-width: 768px) {
+  .news-list {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+.footer-news hr {
+  margin: 10px 0;
+}
+
+.footer-news h4#news {
+  margin-top: 5px;
+}
+
+.gallery-section {
+  padding-bottom: 250px !important; 
+}
+
+.gallery-section .container {
+  text-align: center;
+}
+
+.gallery-section h4,
+.gallery-section p {
+  text-align: center;
+  width: 100%;
+}
+
+.gallery-section .illust-title {
+  text-align: center;
 }
 
 .illust-title {
-  color: #0E0E54;
-  font-weight: bold;
+  display: block; 
+  text-align: center; 
+  font-size: 14px; 
+  margin-bottom: 5px; 
+  font-weight: bold; 
+  color: #333; 
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
 }
