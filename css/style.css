@@ -677,7 +677,8 @@ footer {
 
 footer p.memo {
   margin: 0 auto 10px;
-  font-size: 13px;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 footer ul.menu {
@@ -689,6 +690,7 @@ footer ul.menu li a {
   display: block;
   padding: 5px 0;
   color: #111141;
+  font-weight: bold;
 }
 
 footer ul.menu li a:hover {
@@ -1065,7 +1067,8 @@ nav#globalnav ul li a {
   height: 2.4em;
   overflow-y: scroll;
   border-radius: 4px;
-  font-size: 13px;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .news-list::-webkit-scrollbar {
@@ -1078,10 +1081,11 @@ nav#globalnav ul li a {
 }
 
 .news-list dt {
-  font-size: 13px;
+  font-size: 14px;
   color: #111141;
   margin: 0;
   line-height: 2.4em;
+  font-weight: bold;
 }
 
 @media only screen and (min-width: 768px) {
