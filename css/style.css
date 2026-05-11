@@ -435,10 +435,15 @@ nav#globalnav.colorchange .globalnav_bg {
 
 /* 通常タイトル */
 nav#globalnav h1 a {
-  color:  #000000;
+  color:  #ffffff;
   display: block;
   padding: 10px 15px 30px;
-  font-size: 40px;
+  font-size: 35px;
+  text-shadow: 
+    1px 1px 0 #000, -1px -1px 0 #000,
+    -1px 1px 0 #000, 1px -1px 0 #000,
+    0px 1px 0 #000,  0-1px 0 #000,
+    -1px 0 0 #000, 1px 0 0 #000; /* 黒で縁取り */
 }
 
 nav#globalnav h1 a:hover {
@@ -446,7 +451,8 @@ nav#globalnav h1 a:hover {
 }
 
 nav#globalnav p#menubtn {
-  color:  #000000;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px #000;
   margin: 0;
   cursor: pointer;
 }
@@ -506,6 +512,7 @@ nav#globalnav.colorchange {
 /* スクロール後タイトル */
 nav#globalnav.colorchange h1 a {
   color:  #000000;
+  text-shadow: none;
 }
 
 nav#globalnav.colorchange h1 a:hover {
@@ -514,6 +521,7 @@ nav#globalnav.colorchange h1 a:hover {
 
 nav#globalnav.colorchange p#menubtn {
   color:  #000000;
+  text-shadow: none;
 }
 
 header {
@@ -916,9 +924,6 @@ a#totop:hover:before {
     z-index: 9;
   }
 
-  nav#globalnav h1 a {
-    font-size: 35px;
-  }
 
   nav#globalnav>.container {
     display: -webkit-box;
@@ -992,7 +997,12 @@ a#totop:hover:before {
     padding: 20px 15px;
     margin: auto;
     font-size: 20px;
-    color:  #000000;
+    color:  #ffffff;
+    text-shadow: 
+    1px 1px 0 #000, -1px -1px 0 #000,
+    -1px 1px 0 #000, 1px -1px 0 #000,
+    0px 1px 0 #000,  0-1px 0 #000,
+    -1px 0 0 #000, 1px 0 0 #000; /* 黒で縁取り */
   }
 
   nav#globalnav ul#navmenu li a:hover {
@@ -1002,6 +1012,7 @@ a#totop:hover:before {
   /* PC版メニュー：スクロール後 */
   nav#globalnav.colorchange ul#navmenu li a {
     color:  #000000;
+    text-shadow: none;
   }
 
   nav#globalnav.colorchange ul#navmenu li a:hover {
