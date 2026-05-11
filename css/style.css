@@ -408,18 +408,18 @@ nav#globalnav .globalnav_bg {
   background: transparent;
   
   /* ぼかし強さ */
-  -webkit-backdrop-filter: blur(12px); 
-  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(10px); 
+  backdrop-filter: blur(10px);
 
 /* ブラー範囲 */
   -webkit-mask-image: linear-gradient(to bottom, 
     black 0%, 
-    black 70%, 
+    black 65%, 
     transparent 100%
   );
   mask-image: linear-gradient(to bottom, 
     black 0%, 
-    black 70%, 
+    black 65%, 
     transparent 100%
   );
 
@@ -430,7 +430,7 @@ nav#globalnav .globalnav_bg {
 nav#globalnav.colorchange .globalnav_bg {
   opacity: 1;
   /* スクロール後は背景を少し濃く？ */
-  background: rgba(255, 255, 255, 0.4); 
+  background: rgba(255, 255, 255, 0.6); 
 }
 
 /* 通常タイトル */
