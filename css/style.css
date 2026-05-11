@@ -402,17 +402,25 @@ nav#globalnav .globalnav_bg {
   position: absolute;
   top: 0;
   z-index: -1;
-  /* 修正：背景色をほぼ透明(0.05)にし、ぼかしを強調 */
+  
+  /* 背景色　薄い白 */
   background: rgba(255, 255, 255, 0.05); 
-  -webkit-backdrop-filter: blur(8px);   /* ぼかしを少し強めて視認性を確保 */
-  backdrop-filter: blur(8px);
+  
+  /* ぼかし強さ */
+  -webkit-backdrop-filter: blur(15px); /* 少し強めに設定すると変化が分かりやすくなります */
+  backdrop-filter: blur(15px);
+
+  /* ブラー範囲 */
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
+
   transition: background 0.3s, backdrop-filter 0.3s;
 } 
 
 /* --- colorchange がついた時（スクロール後） --- */
 nav#globalnav.colorchange .globalnav_bg {
   opacity: 1;
-  /* 修正：スクロール後も白くしすぎず、透明感を維持（0.4〜0.6程度がおすすめ） */
+  /* スクロール後は背景を少し濃く？ */
   background: rgba(255, 255, 255, 0.4); 
 }
 
