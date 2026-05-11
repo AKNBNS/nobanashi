@@ -410,12 +410,20 @@ nav#globalnav .globalnav_bg {
   -webkit-backdrop-filter: blur(15px); /* 少し強めに設定すると変化が分かりやすくなります */
   backdrop-filter: blur(15px);
 
-  /* ブラー範囲 */
-  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 30%, transparent 90%);
-  mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
+/* ブラー範囲 */
+  -webkit-mask-image: linear-gradient(to bottom, 
+    black 0%, 
+    black 75%, 
+    transparent 100%
+  );
+  mask-image: linear-gradient(to bottom, 
+    black 0%, 
+    black 75%, 
+    transparent 100%
+  );
 
   transition: background 0.3s, backdrop-filter 0.3s;
-} 
+}
 
 /* --- colorchange がついた時（スクロール後） --- */
 nav#globalnav.colorchange .globalnav_bg {
