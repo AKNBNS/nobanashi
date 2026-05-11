@@ -414,12 +414,12 @@ nav#globalnav .globalnav_bg {
 /* ブラー範囲 */
   -webkit-mask-image: linear-gradient(to bottom, 
     black 0%, 
-    black 65%, 
+    black 60%, 
     transparent 100%
   );
   mask-image: linear-gradient(to bottom, 
     black 0%, 
-    black 65%, 
+    black 70%, 
     transparent 100%
   );
 
@@ -430,7 +430,7 @@ nav#globalnav .globalnav_bg {
 nav#globalnav.colorchange .globalnav_bg {
   opacity: 1;
   /* スクロール後は背景を少し濃く？ */
-  background: rgba(255, 255, 255, 0.6); 
+  background: rgba(255, 255, 255, 0.7); 
 }
 
 /* 通常タイトル */
