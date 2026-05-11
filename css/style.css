@@ -527,7 +527,7 @@ nav#globalnav.colorchange h1 a {
 
 
 nav#globalnav.colorchange h1 a:hover {
-  color: #2d61fc;
+  color: #2d61fc !important;
 }
 
 nav#globalnav.colorchange p#menubtn {
@@ -1036,7 +1036,7 @@ nav#globalnav.colorchange ul#navmenu li a {
 }
 
   nav#globalnav.colorchange ul#navmenu li a:hover {
-    color: #2d61fc;
+    color: #2d61fc !important;
   }
 
   ul.illust {
