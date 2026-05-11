@@ -402,16 +402,18 @@ nav#globalnav .globalnav_bg {
   position: absolute;
   top: 0;
   z-index: -1;
-  background: rgba(255, 255, 255, 0.2); /* 背景を少し白く */
-  -webkit-backdrop-filter: blur(8px);    /* 背面ぼかしを常時オン */
-  backdrop-filter: blur(8px);            /* 背面ぼかしを常時オン */
-  transition: background 0.3s;           /* 色の変化をなめらかに */
+  /* 修正：背景色をほぼ透明(0.05)にし、ぼかしを強調 */
+  background: rgba(255, 255, 255, 0.05); 
+  -webkit-backdrop-filter: blur(12px);   /* ぼかしを少し強めて視認性を確保 */
+  backdrop-filter: blur(12px);
+  transition: background 0.3s, backdrop-filter 0.3s;
 } 
 
 /* --- colorchange がついた時（スクロール後） --- */
 nav#globalnav.colorchange .globalnav_bg {
   opacity: 1;
-  background: rgba(255, 255, 255, 0.9); /* 背景を少し濃く*/
+  /* 修正：スクロール後も白くしすぎず、透明感を維持（0.4〜0.6程度がおすすめ） */
+  background: rgba(255, 255, 255, 0.4); 
 }
 
 /* 通常タイトル */
