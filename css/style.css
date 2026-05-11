@@ -1140,26 +1140,3 @@ nav#globalnav ul li a {
   text-overflow: ellipsis; 
 }
 
-
-nav#globalnav .globalnav_bg {
-  height: 70px;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  z-index: -1;
-  
-  /* 背景を少しだけ白く透過させる */
-  background: rgba(255, 255, 255, 0.2); 
-  
-  /* 背面にある画像だけぼかす */
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
-}
-
-/* スクロールして .colorchange がついた時はぼかしを消して通常の白背景にする */
-nav#globalnav.colorchange .globalnav_bg {
-  opacity: 1;
-  background: rgba(255, 255, 255, 0.9); /* スクロール後の視認性確保 */
-  -webkit-backdrop-filter: none;
-  backdrop-filter: none;
-}
