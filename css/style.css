@@ -513,16 +513,16 @@ nav#globalnav.colorchange {
 
 /* スクロール後タイトル */
 nav#globalnav.colorchange h1 a {
-  color: #ffffff !important;
+  color: #000 !important;
   text-shadow: 
-    2px 2px 0 #000,
-    -2px -2px 0 #000,
-    -2px 2px 0 #000,
-    2px -2px 0 #000,
-    0px 2px 0 #000,
-    0 -2px 0 #000,
-    -2px 0 0 #000,
-    2px 0 0 #000 !important;
+    2px 2px 0 #ffffff
+    -2px -2px 0 #ffffff,
+    -2px 2px 0 #ffffff,
+    2px -2px 0 #ffffff,
+    0px 2px 0 #ffffff,
+    0 -2px 0 #ffffff,
+    -2px 0 0 #ffffff,
+    2px 0 0 #ffffff !important;
 }
 
 
@@ -1022,17 +1022,16 @@ nav#globalnav ul#navmenu li a {
 
   /* PC版メニュー：スクロール後 */
 nav#globalnav.colorchange ul#navmenu li a {
-  color: #ffffff !important;
-
-  text-shadow:
-    2px 2px 0 #000,
-    -2px -2px 0 #000,
-    -2px 2px 0 #000,
-    2px -2px 0 #000,
-    0px 2px 0 #000,
-    0 -2px 0 #000,
-    -2px 0 0 #000,
-    2px 0 0 #000 !important;
+  color: #000 !important;
+  text-shadow: 
+    2px 2px 0 #ffffff
+    -2px -2px 0 #ffffff,
+    -2px 2px 0 #ffffff,
+    2px -2px 0 #ffffff,
+    0px 2px 0 #ffffff,
+    0 -2px 0 #ffffff,
+    -2px 0 0 #ffffff,
+    2px 0 0 #ffffff !important;
 }
 
   nav#globalnav.colorchange ul#navmenu li a:hover {
