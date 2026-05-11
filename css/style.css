@@ -395,7 +395,7 @@ nav#globalnav {
   width: 100%;
 }
 
-/* --- ナビゲーションの背景設定（スクロール前） --- */
+/* --- ナビゲーションの背景設定（スクロール前・後共通） --- */
 nav#globalnav .globalnav_bg {
   height: 70px;
   width: 100%;
@@ -403,16 +403,15 @@ nav#globalnav .globalnav_bg {
   top: 0;
   z-index: -1;
   background: rgba(255, 255, 255, 0.2); /* 背景を少し白く */
-  -webkit-backdrop-filter: blur(8px);    /* 背面ぼかし */
-  backdrop-filter: blur(8px);           /* 背面ぼかし */
+  -webkit-backdrop-filter: blur(8px);    /* 背面ぼかしを常時オン */
+  backdrop-filter: blur(8px);            /* 背面ぼかしを常時オン */
+  transition: background 0.3s;           /* 色の変化をなめらかに */
 } 
 
-/* --- スクロールして .colorchange がついた時（スクロール後） --- */
+/* --- colorchange がついた時（スクロール後） --- */
 nav#globalnav.colorchange .globalnav_bg {
   opacity: 1;
-  background: rgba(255, 255, 255, 0.9); /* 白背景を濃くする */
-  -webkit-backdrop-filter: none;        /* ぼかしをオフにする */
-  backdrop-filter: none;                 /* ぼかしをオフにする */
+  background: rgba(255, 255, 255, 0.9); /* 背景を少し濃く*/
 }
 
 /* 通常タイトル */
