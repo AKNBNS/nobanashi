@@ -402,7 +402,7 @@ nav#globalnav .globalnav_bg {
   position: absolute;
   top: 0;
   z-index: -1;
-  background: rgba(255, 255, 255, 0.2); /* 背景を少し白く */
+  background: rgba(255, 255, 255, 0.8); /* 背景を少し白く */
   -webkit-backdrop-filter: blur(8px);    /* 背面ぼかしを常時オン */
   backdrop-filter: blur(8px);            /* 背面ぼかしを常時オン */
   transition: background 0.3s;           /* 色の変化をなめらかに */
