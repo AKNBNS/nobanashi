@@ -511,8 +511,8 @@ nav#globalnav.colorchange {
 
 /* スクロール後タイトル */
 nav#globalnav.colorchange h1 a {
-  color:  #000000;
-  text-shadow: none;
+  color: #000000 !important;
+  text-shadow: none !important;
 }
 
 nav#globalnav.colorchange h1 a:hover {
@@ -990,20 +990,21 @@ a#totop:hover:before {
   }
 
   /* PC版メニュー通常時 */
-  nav#globalnav ul#navmenu li a {
-    display: block;
-    font-weight: bold;
-    width: fit-content;
-    padding: 20px 15px;
-    margin: auto;
-    font-size: 20px;
-    color: #ffffff !important;
-    text-shadow: 
+nav#globalnav ul#navmenu li a {
+  display: block;
+  font-weight: bold;
+  width: fit-content;
+  padding: 20px 15px;
+  margin: auto;
+  font-size: 20px;
+  color: #ffffff !important;
+  /* 縁取り設定 */
+  text-shadow: 
     1px 1px 0 #000, -1px -1px 0 #000,
     -1px 1px 0 #000, 1px -1px 0 #000,
-    0px 1px 0 #000,  0-1px 0 #000,
-    -1px 0 0 #000, 1px 0 0 #000; /* 黒で縁取り */
-  }
+    0px 1px 0 #000,  0 -1px 0 #000,
+    -1px 0 0 #000, 1px 0 0 #000;
+}
 
   nav#globalnav ul#navmenu li a:hover {
     color: #2d61fc;
@@ -1011,8 +1012,8 @@ a#totop:hover:before {
 
   /* PC版メニュー：スクロール後 */
   nav#globalnav.colorchange ul#navmenu li a {
-    color:  #000000;
-    text-shadow: none;
+    color: #000000 !important;
+    text-shadow: none !important; /* 縁取りを消す */
   }
 
   nav#globalnav.colorchange ul#navmenu li a:hover {
