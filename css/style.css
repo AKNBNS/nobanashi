@@ -448,7 +448,7 @@ nav#globalnav h1 a {
 
 
 nav#globalnav h1 a:hover {
-  color: #2d61fc;
+  color: #2d61fc !important;
 }
 
 nav#globalnav p#menubtn {
@@ -475,8 +475,9 @@ nav#globalnav ul li a {
 
   text-shadow: none;
 }
+
 nav#globalnav ul li a:hover {
-  color: #2d61fc;
+  color: #2d61fc !important;
 }
 
 nav#globalnav ul#navmenu {
@@ -1008,9 +1009,9 @@ nav#globalnav ul#navmenu li a {
 
 
   
-  nav#globalnav ul#navmenu li a:hover {
-    color: #2d61fc;
-  }
+nav#globalnav ul#navmenu li a:hover {
+  color: #2d61fc !important;
+}
 
   /* PC版メニュー：スクロール後 */
 nav#globalnav.colorchange ul#navmenu li a {
