@@ -404,8 +404,8 @@ nav#globalnav .globalnav_bg {
   z-index: -1;
   /* 修正：背景色をほぼ透明(0.05)にし、ぼかしを強調 */
   background: rgba(255, 255, 255, 0.05); 
-  -webkit-backdrop-filter: blur(12px);   /* ぼかしを少し強めて視認性を確保 */
-  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(8px);   /* ぼかしを少し強めて視認性を確保 */
+  backdrop-filter: blur(8px);
   transition: background 0.3s, backdrop-filter 0.3s;
 } 
 
