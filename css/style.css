@@ -395,7 +395,7 @@ nav#globalnav {
   width: 100%;
 }
 
-/* --- ナビゲーションの背景設定（スクロール前・後共通） --- */
+/* --- ナビ背景設定--- */
 nav#globalnav .globalnav_bg {
   height: 70px;
   width: 100%;
@@ -408,8 +408,8 @@ nav#globalnav .globalnav_bg {
   background: transparent;
   
   /* ぼかし強さ */
-  -webkit-backdrop-filter: blur(7px); 
-  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(8px); 
+  backdrop-filter: blur(8px);
 
 /* ブラー範囲 */
   -webkit-mask-image: linear-gradient(to bottom, 
@@ -429,8 +429,8 @@ nav#globalnav .globalnav_bg {
 /* --- colorchange がついた時（スクロール後） --- */
 nav#globalnav.colorchange .globalnav_bg {
   opacity: 1;
-  /* background: rgba(255, 255, 255, 0.05);  *白いらない？*/
-  background: transparent;
+  background: rgba(255, 255, 255, 0.05);/* ちょっと白*/
+  /* background: transparent;*/
 }
 
 /* 通常タイトル */
@@ -736,7 +736,7 @@ footer p#copyright a:hover {
 footer .container {
     background: rgba(255, 255, 255, 0.4); /* 半透明の白 */
     padding: 20px; /* 内側に余白を作る */
-    border-radius: 8px; /* 角を少し丸くすると柔らかい印象に */
+    border-radius: 8px; /* 角を丸 */
 }
 
 
