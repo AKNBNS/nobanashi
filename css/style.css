@@ -403,12 +403,13 @@ nav#globalnav .globalnav_bg {
   top: 0;
   z-index: -1;
   
-  /* 背景色　薄い白 */
-  background: rgba(255, 255, 255, 0.05); 
+  /* 背景色　薄い白いらない？ */
+  /* background: rgba(255, 255, 255, 0.05);  */
+  background: transparent;
   
   /* ぼかし強さ */
-  -webkit-backdrop-filter: blur(15px); /* 少し強めに設定すると変化が分かりやすくなります */
-  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(12px); 
+  backdrop-filter: blur(12px);
 
 /* ブラー範囲 */
   -webkit-mask-image: linear-gradient(to bottom, 
