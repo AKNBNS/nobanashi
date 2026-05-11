@@ -395,15 +395,24 @@ nav#globalnav {
   width: 100%;
 }
 
+/* --- ナビゲーションの背景設定（スクロール前） --- */
 nav#globalnav .globalnav_bg {
   height: 70px;
   width: 100%;
   position: absolute;
   top: 0;
   z-index: -1;
+  background: rgba(255, 255, 255, 0.2); /* 背景を少し白く */
+  -webkit-backdrop-filter: blur(8px);    /* 背面ぼかし */
+  backdrop-filter: blur(8px);           /* 背面ぼかし */
+} 
+
+/* --- スクロールして .colorchange がついた時（スクロール後） --- */
+nav#globalnav.colorchange .globalnav_bg {
   opacity: 1;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(5%, rgba(230, 230, 230, 0)), color-stop(51%, rgba(255, 255, 255, 0.9)));
-  background: linear-gradient(0deg, rgba(230, 230, 230, 0) 5%, rgba(255, 255, 255, 0.9) 51%);
+  background: rgba(255, 255, 255, 0.9); /* 白背景を濃くする */
+  -webkit-backdrop-filter: none;        /* ぼかしをオフにする */
+  backdrop-filter: none;                 /* ぼかしをオフにする */
 }
 
 /* 通常タイトル */
@@ -474,9 +483,7 @@ nav#globalnav.colorchange {
   background: transparent;
 }
 
-nav#globalnav.colorchange .globalnav_bg {
-  opacity: 0;
-}
+
 
 /* スクロール後タイトル */
 nav#globalnav.colorchange h1 a {
@@ -1131,4 +1138,28 @@ nav#globalnav ul li a {
   white-space: nowrap; 
   overflow: hidden; 
   text-overflow: ellipsis; 
+}
+
+
+nav#globalnav .globalnav_bg {
+  height: 70px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  
+  /* 背景を少しだけ白く透過させる */
+  background: rgba(255, 255, 255, 0.2); 
+  
+  /* 背面にある画像だけぼかす */
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+/* スクロールして .colorchange がついた時はぼかしを消して通常の白背景にする */
+nav#globalnav.colorchange .globalnav_bg {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.9); /* スクロール後の視認性確保 */
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
 }
