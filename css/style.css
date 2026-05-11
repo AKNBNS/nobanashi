@@ -430,7 +430,7 @@ nav#globalnav .globalnav_bg {
 nav#globalnav.colorchange .globalnav_bg {
   opacity: 1;
   /* スクロール後は背景を少し濃く？ */
-  background: rgba(255, 255, 255, 0.7); 
+  background: rgba(255, 255, 255, 0.05); 
 }
 
 /* 通常タイトル */
