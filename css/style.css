@@ -408,8 +408,8 @@ nav#globalnav .globalnav_bg {
   background: transparent;
   
   /* ぼかし強さ */
-  -webkit-backdrop-filter: blur(8px); 
-  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(7px); 
+  backdrop-filter: blur(7px);
 
 /* ブラー範囲 */
   -webkit-mask-image: linear-gradient(to bottom, 
