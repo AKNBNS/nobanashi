@@ -336,7 +336,7 @@ a:active {
 }
 
 a:hover {
-  color: #F1BF00;
+  color: #2d61fc;
 }
 
 ul ul {
@@ -360,7 +360,7 @@ a.btn {
 }
 
 a.btn:hover {
-  background: #F1BF00;
+  background: #2d61fc;
 }
 
 p {
@@ -415,7 +415,7 @@ nav#globalnav h1 a {
 }
 
 nav#globalnav h1 a:hover {
-  color: #F1BF00;
+  color: #2d61fc;
 }
 
 nav#globalnav p#menubtn {
@@ -441,7 +441,7 @@ nav#globalnav ul li a {
 }
 
 nav#globalnav ul li a:hover {
-  color: #F1BF00;
+  color: #2d61fc;
 }
 
 nav#globalnav ul#navmenu {
@@ -486,7 +486,7 @@ nav#globalnav.colorchange h1 a {
 }
 
 nav#globalnav.colorchange h1 a:hover {
-  color: #F1BF00;
+  color: #2d61fc;
 }
 
 nav#globalnav.colorchange p#menubtn {
@@ -694,7 +694,7 @@ footer ul.menu li a {
 }
 
 footer ul.menu li a:hover {
-  color: #F1BF00;
+  color: #2d61fc;
 }
 
 footer ul.menu ul {
@@ -708,7 +708,7 @@ footer p#copyright {
 }
 
 footer p#copyright a:hover {
-  color: #F1BF00;
+  color: #2d61fc;
 }
 
 footer .container {
@@ -775,7 +775,7 @@ form.mailform input[type="submit"] {
 
 form.mailform input[type="submit"]:focus,
 form.mailform input[type="submit"]:hover {
-  background: #F1BF00;
+  background: #2d61fc;
   cursor: pointer;
 }
 
@@ -974,7 +974,7 @@ a#totop:hover:before {
   }
 
   nav#globalnav ul#navmenu li a:hover {
-    color: #F1BF00;
+    color: #2d61fc;
   }
 
   /* PC版メニュー：スクロール後 */
@@ -985,7 +985,7 @@ a#totop:hover:before {
   }
 
   nav#globalnav.colorchange ul#navmenu li a:hover {
-    color: #F1BF00;
+    color: #2d61fc;
   }
 
   ul.illust {
