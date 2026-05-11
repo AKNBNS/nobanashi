@@ -408,8 +408,8 @@ nav#globalnav .globalnav_bg {
   background: transparent;
   
   /* ぼかし強さ */
-  -webkit-backdrop-filter: blur(10px); 
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(8px); 
+  backdrop-filter: blur(8px);
 
 /* ブラー範囲 */
   -webkit-mask-image: linear-gradient(to bottom, 
@@ -429,8 +429,8 @@ nav#globalnav .globalnav_bg {
 /* --- colorchange がついた時（スクロール後） --- */
 nav#globalnav.colorchange .globalnav_bg {
   opacity: 1;
-  /* スクロール後は背景を少し濃く？ */
-  background: rgba(255, 255, 255, 0.05); 
+  /* background: rgba(255, 255, 255, 0.05);  *白いらない？*/
+  background: transparent;
 }
 
 /* 通常タイトル */
