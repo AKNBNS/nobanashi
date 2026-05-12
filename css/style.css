@@ -541,11 +541,28 @@ header {
 
 header img {
   width: 80%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   border-radius: 15px; /* 角丸 */
   display: block;
 }
+
+@media only screen and (max-width: 767px) {
+
+  header {
+    height: auto;
+    padding-top: 90px;
+    padding-bottom: 20px;
+  }
+
+  header img {
+    width: 92%;
+    height: auto;
+    object-fit: contain;
+  }
+
+}
+
 
 main.subpage {
   margin-top: 50px;
@@ -1132,6 +1149,10 @@ nav#globalnav ul li a {
     max-width: 100%;
   }
 }
+
+
+
+
 
 .footer-news hr {
   margin: 10px 0;
