@@ -355,15 +355,15 @@ small{
     font-weight: bold;
     text-align: center;
     width: 70%;
-    overflow: hidden;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
+
 .guide_operation img{
-    max-width: 100%;
-    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 .guide .slide-arrow,.guide .slide-arrow.hover{
     opacity: 1;
