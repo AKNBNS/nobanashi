@@ -532,6 +532,7 @@ nav#globalnav.colorchange p#menubtn {
 header {
   background-color: #ffffff;
   height: 570px;
+  padding-top: 70px;
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -539,7 +540,7 @@ header {
 
 header img {
   width: 100%;
-  height: 100%;
+  height: calc(100% - 70px);
   object-fit: cover;
   object-position: center;
   border-radius: 0;
@@ -555,11 +556,12 @@ header img {
 
   header {
     height: 420px;
+    padding-top: 70px;
   }
 
   header img {
     width: 100%;
-    height: 100%;
+    height: calc(100% - 70px);
     object-fit: cover;
     object-position: center;
     display: block;
