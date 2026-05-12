@@ -529,19 +529,23 @@ nav#globalnav.colorchange p#menubtn {
 }
 
 header {
-  background-color:  #ffffff;
+  background-color: #ffffff;
   height: 500px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 70px; /* 上余白 */
 }
 
 header img {
-  width: 100%;
+  width: 80%;
   height: 100%;
-  -o-object-fit: cover;
   object-fit: cover;
-  object-position: center 70px;
-}
-header img.top-pc {
-  display: none;
+  object-position: center 40px;
+  border-radius: 15px; /* 角丸 */
+  display: block;
 }
 
 main.subpage {
