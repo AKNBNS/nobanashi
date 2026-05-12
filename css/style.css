@@ -538,7 +538,7 @@ header img {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  object-position: center 60px;
+  object-position: center 70px;
 }
 header img.top-pc {
   display: none;
