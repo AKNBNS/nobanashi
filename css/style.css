@@ -559,10 +559,10 @@ header img {
   }
 
   header {
-    height: 70vh;
+    height: 420px;
     padding-top: 70px;
-
-    display: block; /* ← PC用flex解除 */
+  
+    display: block;
   }
 
   header img {
