@@ -1,28 +1,5 @@
 @charset "utf-8";
 
-@font-face {
-    font-family: 'g_icon';
-    src:  url('images/fonts/g_icon.ttf') format('truetype'),
-        url('images/fonts/g_icon.woff') format('woff'),
-        url('images/fonts/g_icon.svg#g_icon') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: block;
-}
-
-[class^="icon-"], [class*=" icon-"], .slide-arrow span, .menu_button, .guide::after, .help::after, .guide_yazirusi .icon {
-    font-family: 'g_icon' !important;
-    speak: never;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-
 html {
     /*ブラウザ機能によるダブルタップズームを抑止*/
     -ms-touch-action: manipulation;
@@ -355,15 +332,15 @@ small{
     font-weight: bold;
     text-align: center;
     width: 70%;
+    overflow: hidden;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
-
 .guide_operation img{
-    display: block;
-    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
 }
 .guide .slide-arrow,.guide .slide-arrow.hover{
     opacity: 1;
@@ -444,13 +421,11 @@ small{
 }
 
 /***拡大モード**********************************************/
-
 .slider.zoom{
     width: 100vw;
     transform: scale(1.5);
     transform-origin: 0 0;
 }
-
 .zoomwrap{
     display: none;
     position: fixed;
