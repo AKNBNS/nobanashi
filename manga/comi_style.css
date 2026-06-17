@@ -444,10 +444,13 @@ small{
 }
 
 /***拡大モード**********************************************/
+
 .slider.zoom{
-    width: 150vw;
-    transform:none;
+    width: 100vw;
+    transform: scale(1.5);
+    transform-origin: 0 0;
 }
+
 .zoomwrap{
     display: none;
     position: fixed;
