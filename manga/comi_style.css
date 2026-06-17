@@ -445,7 +445,7 @@ small{
 
 /***拡大モード**********************************************/
 .slider.zoom{
-    width: 100vw;
+    width: 150vw;
     transform: scale(1.5);
     transform-origin: 0 0;
 }
