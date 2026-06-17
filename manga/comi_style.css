@@ -352,10 +352,9 @@ small{
     font-weight: bold;
 }
 .guide_operation{
-    font-weight: bold;
-    text-align: center;
-    width: 70%;
-    overflow: hidden;
+    width: fit-content;
+    max-width: 70%;
+    overflow: visible;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -368,6 +367,12 @@ small{
 .guide .slide-arrow,.guide .slide-arrow.hover{
     opacity: 1;
 }
+
+.guide_operation img{
+    display: block;
+    margin: 0 auto;
+}
+
 
 /***ヘルプ**********************************************/
 .help{
