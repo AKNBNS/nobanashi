@@ -125,17 +125,7 @@ $(function(){
         $(".guide").stop().fadeOut("fast");
     });
     
-//***拡大モード***
-    function zoomSetting(){
-        $(".menu_show").slideUp(300);
-        $slider.toggleClass("zoom");
-        $(".zoomwrap").fadeToggle(300);
-        $(".zoom_reset").fadeToggle(300);
-        //$("html").scrollLeft(width);
-    }
-    $(".z_button").click(function(){
-        zoomSetting();
-    });
+
     
 //***キーボード操作***
     $(document).keydown(function(e) {
@@ -145,8 +135,6 @@ $(function(){
             $slider.slick('slickNext');
         }else if(e.keyCode === 40){//下　メニュー表示
             $(".menu_show").slideToggle(300);
-        }else if(e.keyCode === 38){//上　拡大モード
-            zoomSetting();
         }
     });
     
@@ -210,7 +198,7 @@ $(function(){
         });
         //ダブルタップ操作*****拡大モード*****
         var tapCount = 0;
-        $(".slider,.zoomwrap").on('touchstart', function(e) {
+        $(".slider").on('touchstart', function(e) {
             if(!$(e.target).closest(".slide-arrow").length) {
                 // タッチ範囲に矢印が含まれてない時
                 // シングルタップ判定
@@ -223,8 +211,7 @@ $(function(){
                 } else {
                     // ブラウザ機能によるズームを防止
                     e.preventDefault(); 
-                    //拡大モード
-                    zoomSetting();
+
                     //判定カウントリセット
                     tapCount = 0;
                 }
